@@ -2,16 +2,27 @@
   "name": "@el173/rn-micro-frontend-boilerplate",
   "private": true,
   "scripts": {
-    "bootstrap": "yarn --cwd rn-mini-app-one && yarn --cwd rn-mini-app-two && yarn --cwd rn-super-app",
-    "pod-install": "cd rn-mini-app-one/ios/ && pod install && cd ../../rn-mini-app-two/ios/ && pod install && cd ../../rn-super-app/ios && pod install",
+    "bootstrap": "yarn --cwd rn-mini-app-one && yarn --cwd rn-mini-app-two && yarn --cwd rn-mini-app-soba && yarn --cwd rn-super-app",
+    "pod-install": "cd rn-mini-app-one/ios/ && pod install && cd ../../rn-mini-app-two/ios/ && cd ../../rn-mini-app-soba/ios/ && pod install && cd ../../rn-super-app/ios && pod install",
+    "pod-update-soba": "cd rn-mini-app-soba/ios/ && pod repo update",
     "start:app1": "yarn --cwd rn-mini-app-one start",
     "start:app2": "yarn --cwd rn-mini-app-two start",
+    "start:soba": "yarn --cwd rn-mini-app-soba start",
     "start:host": "yarn --cwd rn-super-app start",
     "run:host:ios": "yarn --cwd rn-super-app ios",
     "run:host:android": "yarn --cwd rn-super-app android",
     "run:app1:ios": "STANDALONE=1 yarn --cwd rn-mini-app-one ios",
     "run:app1:android": "STANDALONE=1 yarn --cwd rn-mini-app-one android",
     "run:app2:ios": "STANDALONE=1 yarn --cwd rn-mini-app-two ios",
-    "run:app2:android": "STANDALONE=1 yarn --cwd rn-mini-app-two android"
+    "run:app2:android": "STANDALONE=1 yarn --cwd rn-mini-app-two android",
+    "run:soba:ios": "STANDALONE=1 yarn --cwd rn-mini-app-soba ios",
+    "run:soba:android": "STANDALONE=1 yarn --cwd rn-mini-app-soba android",
+    "adbreverse": "adb reverse tcp:8081 tcp:8081 && adb reverse tcp:8083 tcp:8083 && adb reverse tcp:8084 tcp:8084 && adb reverse tcp:8085 tcp:8085",
+    "git-submodule": "git submodule foreach yarn start",
+    "start": "yarn concurrently -P 'yarn:start:*(!standalone) {1}' "
+
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
   }
 }

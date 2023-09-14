@@ -7,3 +7,6 @@
 [submodule "rn-mini-app-two"]
 	path = rn-mini-app-two
 	url = https://github.com/el173/rn-mini-app-two.git
+[submodule "rn-mini-app-soba"]
+	path = rn-mini-app-soba
+	url = https://git.amela.vn/app-order-soba/soba-app.git

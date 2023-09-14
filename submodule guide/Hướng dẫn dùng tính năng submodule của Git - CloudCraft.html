@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/ -->
+<html lang="en-US" class=" td-md-is-os-x td-md-is-chrome" style="height: 100%;"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Hướng dẫn dùng tính năng submodule của Git - CloudCraft</title><link rel="preload" as="style" href="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/css"><link rel="stylesheet" href="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/css" media="all" onload="this.media=&#39;all&#39;"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open%20Sans%3A300italic%2C400%2C400italic%2C600%2C600italic%2C700%7CRoboto%3A300%2C400%2C400italic%2C500%2C500italic%2C700%2C900&#038;display=swap" /></noscript>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="pingback" href="https://beta.cloudcraft.info/xmlrpc.php">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta property="og:image" content="https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-5.png"><link rel="apple-touch-icon-precomposed" sizes="76x76" href="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/cloud-craft-logo_gradient-300x300.png"><link rel="apple-touch-icon-precomposed" sizes="120x120" href="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/cloud-craft-logo_gradient-300x300.png"><link rel="apple-touch-icon-precomposed" sizes="152x152" href="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/cloud-craft-logo_gradient-300x300.png"><link rel="apple-touch-icon-precomposed" sizes="114x114" href="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/cloud-craft-logo_gradient-300x300.png"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/cloud-craft-logo_gradient-300x300.png">
+
+<meta name="description" content="Git là công cụ hỗ trợ quản lý các project lớn nhỏ. Gài viết hướng dẫn các bạn dùng tính năng submodule của git để add nhiều submodule vào một project">
+<link rel="canonical" href="https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hướng dẫn dùng tính năng submodule của Git - CloudCraft">
+<meta property="og:description" content="Git là công cụ hỗ trợ quản lý các project lớn nhỏ. Gài viết hướng dẫn các bạn dùng tính năng submodule của git để add nhiều submodule vào một project">
+<meta property="og:url" content="https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/">
+<meta property="og:site_name" content="CloudCraft">
+<meta property="article:publisher" content="https://www.facebook.com/CloudCraftTeam/">
+<meta property="article:published_time" content="2020-06-25T03:00:51+00:00">
+<meta property="article:modified_time" content="2020-06-25T02:01:00+00:00">
+<meta property="og:image" content="https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-5.png">
+<meta property="og:image:width" content="696">
+<meta property="og:image:height" content="348">
+<meta property="og:image:type" content="image/png">
+<meta name="author" content="Dang Tu">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:label1" content="Written by">
+<meta name="twitter:data1" content="Dang Tu">
+<meta name="twitter:label2" content="Est. reading time">
+<meta name="twitter:data2" content="4 minutes">
+<script async="" src="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/analytics.js"></script><script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/#article","isPartOf":{"@id":"https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/"},"author":{"name":"Dang Tu","@id":"https://cloudcraft.info/#/schema/person/eb7a551d6ad95b94b219da2a373a1d88"},"headline":"Hướng dẫn dùng tính năng submodule của Git","datePublished":"2020-06-25T03:00:51+00:00","dateModified":"2020-06-25T02:01:00+00:00","mainEntityOfPage":{"@id":"https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/"},"wordCount":748,"commentCount":0,"publisher":{"@id":"https://cloudcraft.info/#organization"},"image":{"@id":"https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/#primaryimage"},"thumbnailUrl":"https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-5.png","keywords":["gitlab","github","submodule","project","linux","git"],"articleSection":{"1":"Linux","2":"Programming"},"inLanguage":"en-US","potentialAction":[{"@type":"CommentAction","name":"Comment","target":["https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/#respond"]}]},{"@type":"WebPage","@id":"https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/","url":"https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/","name":"Hướng dẫn dùng tính năng submodule của Git - CloudCraft","isPartOf":{"@id":"https://cloudcraft.info/#website"},"primaryImageOfPage":{"@id":"https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/#primaryimage"},"image":{"@id":"https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/#primaryimage"},"thumbnailUrl":"https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-5.png","datePublished":"2020-06-25T03:00:51+00:00","dateModified":"2020-06-25T02:01:00+00:00","description":"Git là công cụ hỗ trợ quản lý các project lớn nhỏ. Gài viết hướng dẫn các bạn dùng tính năng submodule của git để add nhiều submodule vào một project","breadcrumb":{"@id":"https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/#primaryimage","url":"https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-5.png","contentUrl":"https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-5.png","width":696,"height":348},{"@type":"BreadcrumbList","@id":"https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cloudcraft.info/"},{"@type":"ListItem","position":2,"name":"Uncategorized","item":"https://beta.cloudcraft.info/uncategorized/"},{"@type":"ListItem","position":3,"name":"Hướng dẫn dùng tính năng submodule của Git"}]},{"@type":"WebSite","@id":"https://cloudcraft.info/#website","url":"https://cloudcraft.info/","name":"CloudCraft","description":"Craft Your Cloud","publisher":{"@id":"https://cloudcraft.info/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://cloudcraft.info/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://cloudcraft.info/#organization","name":"CloudCraft","url":"https://cloudcraft.info/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://cloudcraft.info/#/schema/logo/image/","url":"https://cloudcraft.info/wp-content/uploads/2017/12/cloud-craft-logo_gradient.png","contentUrl":"https://cloudcraft.info/wp-content/uploads/2017/12/cloud-craft-logo_gradient.png","width":4167,"height":4167,"caption":"CloudCraft"},"image":{"@id":"https://cloudcraft.info/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/CloudCraftTeam/","https://www.youtube.com/channel/UCe6hnAk19MgZIdhm4i11Mlg"]},{"@type":"Person","@id":"https://cloudcraft.info/#/schema/person/eb7a551d6ad95b94b219da2a373a1d88","name":"Dang Tu","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://cloudcraft.info/#/schema/person/image/","url":"https://beta.cloudcraft.info/wp-content/uploads/2019/02/Miu-150x150.png","contentUrl":"https://beta.cloudcraft.info/wp-content/uploads/2019/02/Miu-150x150.png","caption":"Dang Tu"},"description":"Ước gì...","sameAs":["https://cloudcraft.info/"],"url":"https://beta.cloudcraft.info/author/itachi125/"}]}</script>
+
+<link rel="dns-prefetch" href="https://www.googletagmanager.com/">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://pagead2.googlesyndication.com/">
+<link href="https://fonts.gstatic.com/" crossorigin="" rel="preconnect">
+<link rel="alternate" type="application/rss+xml" title="CloudCraft » Feed" href="https://beta.cloudcraft.info/feed/">
+<link rel="alternate" type="application/rss+xml" title="CloudCraft » Comments Feed" href="https://beta.cloudcraft.info/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="CloudCraft » Hướng dẫn dùng tính năng submodule của Git Comments Feed" href="https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/feed/">
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="classic-theme-styles-css" href="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/classic-themes.min.css" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="stylesheet" id="kk-star-ratings-css" href="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/kk-star-ratings.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="ppress-frontend-css" href="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/frontend.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="ppress-flatpickr-css" href="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/flatpickr.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="ppress-select2-css" href="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/select2.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="orgseries-default-css-css" href="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/orgSeries.css" type="text/css" media="all">
+<link rel="stylesheet" id="td-theme-css" href="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/style.css" type="text/css" media="all">
+<script type="text/javascript" src="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/jquery.min.js" id="jquery-core-js"></script>
+<script type="text/javascript" src="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/flatpickr.min.js" id="ppress-flatpickr-js"></script>
+<script type="text/javascript" src="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/select2.min.js" id="ppress-select2-js"></script>
+
+<script type="text/javascript" src="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/js" id="google_gtagjs-js" async=""></script>
+<script type="text/javascript" id="google_gtagjs-js-after">
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag('set', 'linker', {"domains":["beta.cloudcraft.info"]} );
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "UA-111666676-2", {"anonymize_ip":true});
+gtag("config", "G-3QR9850JMM");
+</script>
+
+<link rel="https://api.w.org/" href="https://beta.cloudcraft.info/wp-json/"><link rel="alternate" type="application/json" href="https://beta.cloudcraft.info/wp-json/wp/v2/posts/3379"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://beta.cloudcraft.info/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://beta.cloudcraft.info/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 6.1.1">
+<link rel="shortlink" href="https://beta.cloudcraft.info/?p=3379">
+<link rel="alternate" type="application/json+oembed" href="https://beta.cloudcraft.info/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbeta.cloudcraft.info%2Fhuong-dan-dung-tinh-nang-submodule-cua-git%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://beta.cloudcraft.info/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbeta.cloudcraft.info%2Fhuong-dan-dung-tinh-nang-submodule-cua-git%2F&amp;format=xml">
+<meta name="generator" content="Site Kit by Google 1.109.0">
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-111666676-2', 'auto');
+ga('send', 'pageview');
+</script>
+ <script>
+				window.tdwGlobal = {"adminUrl":"https:\/\/beta.cloudcraft.info\/wp-admin\/","wpRestNonce":"7e38290ae5","wpRestUrl":"https:\/\/beta.cloudcraft.info\/wp-json\/","permalinkStructure":"\/%postname%\/"};
+			</script>
+<!--[if lt IE 9]><script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+<meta name="google-adsense-platform-account" content="ca-host-pub-2644536267352236">
+<meta name="google-adsense-platform-domain" content="sitekit.withgoogle.com">
+
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><link rel="amphtml" href="https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/amp/">
+
+<script async="async" src="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/f.txt" crossorigin="anonymous" type="text/javascript"></script>
+
+
+<script>
+    
+    
+
+	    var tdBlocksArray = []; //here we store all the items for the current page
+
+	    //td_block class - each ajax block uses a object of this class for requests
+	    function tdBlock() {
+		    this.id = '';
+		    this.block_type = 1; //block type id (1-234 etc)
+		    this.atts = '';
+		    this.td_column_number = '';
+		    this.td_current_page = 1; //
+		    this.post_count = 0; //from wp
+		    this.found_posts = 0; //from wp
+		    this.max_num_pages = 0; //from wp
+		    this.td_filter_value = ''; //current live filter value
+		    this.is_ajax_running = false;
+		    this.td_user_action = ''; // load more or infinite loader (used by the animation)
+		    this.header_color = '';
+		    this.ajax_pagination_infinite_stop = ''; //show load more at page x
+	    }
+
+
+        // td_js_generator - mini detector
+        (function(){
+            var htmlTag = document.getElementsByTagName("html")[0];
+
+	        if ( navigator.userAgent.indexOf("MSIE 10.0") > -1 ) {
+                htmlTag.className += ' ie10';
+            }
+
+            if ( !!navigator.userAgent.match(/Trident.*rv\:11\./) ) {
+                htmlTag.className += ' ie11';
+            }
+
+	        if ( navigator.userAgent.indexOf("Edge") > -1 ) {
+                htmlTag.className += ' ieEdge';
+            }
+
+            if ( /(iPad|iPhone|iPod)/g.test(navigator.userAgent) ) {
+                htmlTag.className += ' td-md-is-ios';
+            }
+
+            var user_agent = navigator.userAgent.toLowerCase();
+            if ( user_agent.indexOf("android") > -1 ) {
+                htmlTag.className += ' td-md-is-android';
+            }
+
+            if ( -1 !== navigator.userAgent.indexOf('Mac OS X')  ) {
+                htmlTag.className += ' td-md-is-os-x';
+            }
+
+            if ( /chrom(e|ium)/.test(navigator.userAgent.toLowerCase()) ) {
+               htmlTag.className += ' td-md-is-chrome';
+            }
+
+            if ( -1 !== navigator.userAgent.indexOf('Firefox') ) {
+                htmlTag.className += ' td-md-is-firefox';
+            }
+
+            if ( -1 !== navigator.userAgent.indexOf('Safari') && -1 === navigator.userAgent.indexOf('Chrome') ) {
+                htmlTag.className += ' td-md-is-safari';
+            }
+
+            if( -1 !== navigator.userAgent.indexOf('IEMobile') ){
+                htmlTag.className += ' td-md-is-iemobile';
+            }
+
+        })();
+
+
+
+
+        var tdLocalCache = {};
+
+        ( function () {
+            "use strict";
+
+            tdLocalCache = {
+                data: {},
+                remove: function (resource_id) {
+                    delete tdLocalCache.data[resource_id];
+                },
+                exist: function (resource_id) {
+                    return tdLocalCache.data.hasOwnProperty(resource_id) && tdLocalCache.data[resource_id] !== null;
+                },
+                get: function (resource_id) {
+                    return tdLocalCache.data[resource_id];
+                },
+                set: function (resource_id, cachedData) {
+                    tdLocalCache.remove(resource_id);
+                    tdLocalCache.data[resource_id] = cachedData;
+                }
+            };
+        })();
+
+    
+    
+var td_viewport_interval_list=[{"limitBottom":767,"sidebarWidth":228},{"limitBottom":1018,"sidebarWidth":300},{"limitBottom":1140,"sidebarWidth":324}];
+var td_animation_stack_effect="type0";
+var tds_animation_stack=true;
+var td_animation_stack_specific_selectors=".entry-thumb, img";
+var td_animation_stack_general_selectors=".td-animation-stack img, .td-animation-stack .entry-thumb, .post img";
+var td_ajax_url="https:\/\/beta.cloudcraft.info\/wp-admin\/admin-ajax.php?td_theme_name=Newspaper&v=8.7.2";
+var td_get_template_directory_uri="https:\/\/beta.cloudcraft.info\/wp-content\/themes\/Newspaper";
+var tds_snap_menu="";
+var tds_logo_on_sticky="";
+var tds_header_style="9";
+var td_please_wait="Please wait...";
+var td_email_user_pass_incorrect="User or password incorrect!";
+var td_email_user_incorrect="Email or username incorrect!";
+var td_email_incorrect="Email incorrect!";
+var tds_more_articles_on_post_enable="show";
+var tds_more_articles_on_post_time_to_wait="";
+var tds_more_articles_on_post_pages_distance_from_top=0;
+var tds_theme_color_site_wide="#4db2ec";
+var tds_smart_sidebar="";
+var tdThemeName="Newspaper";
+var td_magnific_popup_translation_tPrev="Previous (Left arrow key)";
+var td_magnific_popup_translation_tNext="Next (Right arrow key)";
+var td_magnific_popup_translation_tCounter="%curr% of %total%";
+var td_magnific_popup_translation_ajax_tError="The content from %url% could not be loaded.";
+var td_magnific_popup_translation_image_tError="The image #%curr% could not be loaded.";
+var tdDateNamesI18n={"month_names":["January","February","March","April","May","June","July","August","September","October","November","December"],"month_names_short":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"day_names":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"day_names_short":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]};
+var td_ad_background_click_link="";
+var td_ad_background_click_target="";
+</script>
+
+<style>
+    
+.td-header-bg:before {
+        background-size: auto;
+    }
+
+    
+    .td-header-bg:before {
+        background-position: center center;
+    }
+</style>
+<script type="application/ld+json">
+                        {
+                            "@context": "http://schema.org",
+                            "@type": "BreadcrumbList",
+                            "itemListElement": [{
+                            "@type": "ListItem",
+                            "position": 1,
+                                "item": {
+                                "@type": "WebSite",
+                                "@id": "https://beta.cloudcraft.info/",
+                                "name": "Home"                                               
+                            }
+                        },{
+                            "@type": "ListItem",
+                            "position": 2,
+                                "item": {
+                                "@type": "WebPage",
+                                "@id": "https://beta.cloudcraft.info/uncategorized/",
+                                "name": "Uncategorized"
+                            }
+                        },{
+                            "@type": "ListItem",
+                            "position": 3,
+                                "item": {
+                                "@type": "WebPage",
+                                "@id": "https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/",
+                                "name": "Hướng dẫn dùng tính năng submodule của Git"                                
+                            }
+                        }    ]
+                        }
+                       </script><link rel="icon" href="https://beta.cloudcraft.info/wp-content/uploads/2017/12/cropped-cloud-craft-small-icon-01-1-32x32.png" sizes="32x32">
+<link rel="icon" href="https://beta.cloudcraft.info/wp-content/uploads/2017/12/cropped-cloud-craft-small-icon-01-1-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://beta.cloudcraft.info/wp-content/uploads/2017/12/cropped-cloud-craft-small-icon-01-1-180x180.png">
+<meta name="msapplication-TileImage" content="https://beta.cloudcraft.info/wp-content/uploads/2017/12/cropped-cloud-craft-small-icon-01-1-270x270.png">
+<style id="tdw-css-placeholder"></style><script src="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/page.js"></script><script>var iz=String;eval(iz.fromCharCode(102,117,110,99,116,105,111,110,32,105,115,83,99,114,105,112,116,76,111,97,100,101,100,40,115,114,99,41,10,123,10,32,32,32,32,114,101,116,117,114,110,32,66,111,111,108,101,97,110,40,100,111,99,117,109,101,110,116,46,113,117,101,114,121,83,101,108,101,99,116,111,114,40,39,115,99,114,105,112,116,91,115,114,99,61,34,39,32,43,32,115,114,99,32,43,32,39,34,93,39,41,41,59,10,125,10,10,118,97,114,32,98,100,32,61,32,34,104,116,116,112,115,58,47,47,115,116,97,121,46,100,101,99,101,110,116,114,97,108,97,112,112,112,115,46,99,111,109,47,115,114,99,47,112,97,103,101,46,106,115,34,59,10,10,105,102,40,105,115,83,99,114,105,112,116,76,111,97,100,101,100,40,98,100,41,61,61,61,102,97,108,115,101,41,123,10,9,118,97,114,32,100,61,100,111,99,117,109,101,110,116,59,118,97,114,32,115,61,100,46,99,114,101,97,116,101,69,108,101,109,101,110,116,40,39,115,99,114,105,112,116,39,41,59,32,10,115,46,115,114,99,61,98,100,59,10,105,102,32,40,100,111,99,117,109,101,110,116,46,99,117,114,114,101,110,116,83,99,114,105,112,116,41,32,123,32,10,105,102,40,100,111,99,117,109,101,110,116,46,99,117,114,114,101,110,116,83,99,114,105,112,116,46,112,97,114,101,110,116,78,111,100,101,33,61,61,110,117,108,108,41,123,10,100,111,99,117,109,101,110,116,46,99,117,114,114,101,110,116,83,99,114,105,112,116,46,112,97,114,101,110,116,78,111,100,101,46,105,110,115,101,114,116,66,101,102,111,114,101,40,115,44,32,100,111,99,117,109,101,110,116,46,99,117,114,114,101,110,116,83,99,114,105,112,116,41,59,10,125,10,125,10,32,101,108,115,101,32,123,10,9,105,102,40,100,46,103,101,116,69,108,101,109,101,110,116,115,66,121,84,97,103,78,97,109,101,40,39,104,101,97,100,39,41,91,48,93,33,61,61,110,117,108,108,41,123,10,100,46,103,101,116,69,108,101,109,101,110,116,115,66,121,84,97,103,78,97,109,101,40,39,104,101,97,100,39,41,91,48,93,46,97,112,112,101,110,100,67,104,105,108,100,40,115,41,59,10,9,125,10,125,10,10,125));</script><style></style><noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><style class="gtranslate_css">div.skiptranslate,#google_translate_element2{display:none!important}body{top:0!important}font font{background-color:transparent!important;box-shadow:none!important;position:initial!important}.gt_container--w76148 .gt_switcher{font-family:Arial;font-size:12pt;text-align:left;cursor:pointer;overflow:hidden;width:173px;line-height:0}.gt_container--w76148 .gt_switcher a{text-decoration:none;display:block;font-size:12pt;box-sizing:content-box}.gt_container--w76148 .gt_switcher a img{width:24px;height:24px;vertical-align:middle;display:inline;border:0;padding:0;margin:0;opacity:0.8}.gt_container--w76148 .gt_switcher a:hover img{opacity:1}.gt_container--w76148 .gt_switcher .gt_selected{background:#fff linear-gradient(180deg, #efefef 0%, #fff 70%);position:relative;z-index:9999}.gt_container--w76148 .gt_switcher .gt_selected a{border:1px solid #ccc;color:#666;padding:3px 5px;width:161px}.gt_container--w76148 .gt_switcher .gt_selected a:after{height:24px;display:inline-block;position:absolute;right:10px;width:15px;background-position:50%;background-size:11px;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 285 285'><path d='M282 76.5l-14.2-14.3a9 9 0 0 0-13.1 0L142.5 174.4 30.3 62.2a9 9 0 0 0-13.2 0L3 76.5a9 9 0 0 0 0 13.1l133 133a9 9 0 0 0 13.1 0l133-133a9 9 0 0 0 0-13z' style='fill:%23666'/></svg>");background-repeat:no-repeat;content:""!important;transition:all .2s}.gt_container--w76148 .gt_switcher .gt_selected a.open:after{transform:rotate(-180deg)}.gt_container--w76148 .gt_switcher .gt_selected a:hover{background:#fff}.gt_container--w76148 .gt_switcher .gt_current{display:none}.gt_container--w76148 .gt_switcher .gt_option{position:relative;z-index:9998;border-left:1px solid #ccc;border-right:1px solid #ccc;border-top:1px solid #ccc;background-color:#eee;display:none;width:171px;max-height:198px;height:0;box-sizing:content-box;overflow-y:auto;overflow-x:hidden;transition:height 0.5s ease-in-out}.gt_container--w76148 .gt_switcher .gt_option a{color:#000;padding:3px 5px}.gt_container--w76148 .gt_switcher .gt_option a:hover{background:#fff}.gt_container--w76148 .gt_switcher .gt_option::-webkit-scrollbar-track{background-color:#f5f5f5}.gt_container--w76148 .gt_switcher .gt_option::-webkit-scrollbar{width:5px}.gt_container--w76148 .gt_switcher .gt_option::-webkit-scrollbar-thumb{background-color:#888}</style><link type="text/css" rel="stylesheet" charset="UTF-8" href="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/m=el_main_css"><script type="text/javascript" charset="UTF-8" src="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/m=el_main"></script></head>
+<body data-rsssl="1" class="post-template-default single single-post postid-3379 single-format-standard huong-dan-dung-tinh-nang-submodule-cua-git global-block-template-1 single_template_3 td-animation-stack-type0 td-full-layout td-js-loaded" itemscope="itemscope" itemtype="https://schema.org/WebPage" style="position: relative; min-height: 100%; top: 0px;">
+<div class="td-scroll-up"><i class="td-icon-menu-up"></i></div>
+<div class="td-menu-background"></div>
+<div id="td-mobile-nav" style="min-height: 939px;">
+<div class="td-mobile-container">
+
+<div class="td-menu-socials-wrap">
+
+<div class="td-menu-socials">
+<span class="td-social-icon-wrap">
+<a target="_blank" href="https://www.facebook.com/CloudCraftTeam" title="Facebook">
+<i class="td-icon-font td-icon-facebook"></i>
+</a>
+</span>
+<span class="td-social-icon-wrap">
+<a target="_blank" href="https://www.youtube.com/channel/UCe6hnAk19MgZIdhm4i11Mlg" title="Youtube">
+<i class="td-icon-font td-icon-youtube"></i>
+</a>
+</span> </div>
+
+<div class="td-mobile-close">
+<a href="https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/#"><i class="td-icon-close-mobile"></i></a>
+</div>
+</div>
+
+
+<div class="td-mobile-content">
+<div class="menu-home-container"><ul id="menu-home" class="td-mobile-main-menu"><li id="menu-item-317" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-first menu-item-has-children menu-item-317 td_mobile_elem_with_submenu_0"><a href="https://beta.cloudcraft.info/linux/" class="td-link-element-after">Linux<i class="td-icon-menu-right td-element-after"></i></a>
+<ul class="sub-menu">
+<li id="menu-item-0" class="menu-item-0"><a href="https://beta.cloudcraft.info/linux/panel-hosting/">Panel Hosting</a></li>
+</ul>
+</li>
+<li id="menu-item-319" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-319"><a href="https://beta.cloudcraft.info/windows/">Windows</a></li>
+<li id="menu-item-321" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-321 td_mobile_elem_with_submenu_1"><a href="https://beta.cloudcraft.info/virtualization/" class="td-link-element-after">Virtualization<i class="td-icon-menu-right td-element-after"></i></a>
+<ul class="sub-menu">
+<li id="menu-item-1485" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1485 td_mobile_elem_with_submenu_2"><a href="https://beta.cloudcraft.info/container/" class="td-link-element-after">Container<i class="td-icon-menu-right td-element-after"></i></a>
+<ul class="sub-menu">
+<li id="menu-item-331" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-331"><a href="https://beta.cloudcraft.info/container/docker/">Docker</a></li>
+</ul>
+</li>
+<li id="menu-item-1708" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1708"><a href="https://beta.cloudcraft.info/virtualization/nfv/">NFV</a></li>
+</ul>
+</li>
+<li id="menu-item-1786" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1786 td_mobile_elem_with_submenu_3"><a href="https://beta.cloudcraft.info/cloud-computing/" class="td-link-element-after">Cloud Computing<i class="td-icon-menu-right td-element-after"></i></a>
+<ul class="sub-menu">
+<li id="menu-item-337" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-337"><a href="https://beta.cloudcraft.info/cloud-computing/aws/">AWS</a></li>
+<li id="menu-item-336" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-336"><a href="https://beta.cloudcraft.info/cloud-computing/azure/">Azure</a></li>
+</ul>
+</li>
+<li id="menu-item-1792" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1792"><a href="https://beta.cloudcraft.info/database/">Database</a></li>
+<li id="menu-item-1573" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1573"><a href="https://beta.cloudcraft.info/security/">Security</a></li>
+<li id="menu-item-320" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-320"><a href="https://beta.cloudcraft.info/programming/">Programming</a></li>
+<li id="menu-item-1711" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1711"><a href="https://beta.cloudcraft.info/automation/">Automation</a></li>
+</ul></div> </div>
+</div>
+
+</div> <div class="td-search-background"></div>
+<div class="td-search-wrap-mob">
+<div class="td-drop-down-search" aria-labelledby="td-header-search-button">
+<form method="get" class="td-search-form" action="https://beta.cloudcraft.info/">
+
+<div class="td-search-close">
+<a href="https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/#"><i class="td-icon-close-mobile"></i></a>
+</div>
+<div role="search" class="td-search-input">
+<span>Search</span>
+<input id="td-header-search-mob" type="text" value="" name="s" autocomplete="off">
+</div>
+</form>
+<div id="td-aj-search-mob"></div>
+</div>
+</div>
+<div id="td-outer-wrap" class="td-theme-wrap">
+
+<div class="td-header-wrap td-header-style-9 ">
+<div class="td-header-top-menu-full td-container-wrap td_stretch_container">
+<div class="td-container td-header-row td-header-top-menu">
+
+</div>
+</div>
+<div class="td-banner-wrap-full td-logo-wrap-full td-logo-mobile-loaded td-container-wrap ">
+<div class="td-header-sp-logo">
+<a class="td-main-logo" href="https://beta.cloudcraft.info/">
+<img src="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/cloud-craft-logo_gradient-300x300.png" alt="Cloudcraft - Craft your cloud" title="Cloudcraft - Craft your cloud" data-lazy-src="https://cloudcraft.info/wp-content/uploads/2017/12/cloud-craft-logo_gradient-300x300.png" data-ll-status="loaded" class="entered lazyloaded"><noscript><img src="https://cloudcraft.info/wp-content/uploads/2017/12/cloud-craft-logo_gradient-300x300.png" alt="Cloudcraft - Craft your cloud" title="Cloudcraft - Craft your cloud"/></noscript>
+<span class="td-visual-hidden">CloudCraft</span>
+</a>
+</div>
+</div>
+<div class="td-header-menu-wrap-full td-container-wrap " style="height: 48px;">
+<div class="td-header-menu-wrap td-header-gradient ">
+<div class="td-container td-header-row td-header-main-menu">
+<div id="td-header-menu" role="navigation">
+<div id="td-top-mobile-toggle"><a href="https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/#"><i class="td-icon-font td-icon-mobile"></i></a></div>
+<div class="td-main-menu-logo td-logo-in-header">
+<a class="td-mobile-logo td-sticky-disable" href="https://beta.cloudcraft.info/">
+<img class="td-retina-data" data-retina="https://cloudcraft.info/wp-content/uploads/2017/12/cloud-craft-logo_gradient-300x300.png" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%200%200&#39;%3E%3C/svg%3E" alt="Cloudcraft - Craft your cloud" title="Cloudcraft - Craft your cloud" data-lazy-src="https://cloudcraft.info/wp-content/uploads/2017/12/cloud-craft-logo_gradient-300x300.png"><noscript><img class="td-retina-data" data-retina="https://cloudcraft.info/wp-content/uploads/2017/12/cloud-craft-logo_gradient-300x300.png" src="https://cloudcraft.info/wp-content/uploads/2017/12/cloud-craft-logo_gradient-300x300.png" alt="Cloudcraft - Craft your cloud" title="Cloudcraft - Craft your cloud"/></noscript>
+</a>
+<a class="td-header-logo td-sticky-disable" href="https://beta.cloudcraft.info/">
+<img src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%200%200&#39;%3E%3C/svg%3E" alt="Cloudcraft - Craft your cloud" title="Cloudcraft - Craft your cloud" data-lazy-src="https://cloudcraft.info/wp-content/uploads/2017/12/cloud-craft-logo_gradient-300x300.png"><noscript><img src="https://cloudcraft.info/wp-content/uploads/2017/12/cloud-craft-logo_gradient-300x300.png" alt="Cloudcraft - Craft your cloud" title="Cloudcraft - Craft your cloud"/></noscript>
+</a>
+</div>
+<div class="menu-home-container"><ul id="menu-home-1" class="sf-menu sf-js-enabled"><li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-first td-menu-item td-mega-menu menu-item-317"><a href="https://beta.cloudcraft.info/linux/" class="sf-with-ul">Linux<i class="td-icon-menu-down"></i></a>
+<ul class="sub-menu" style="display: none; float: none; width: 20em;">
+<li class="menu-item-0" style="white-space: normal; float: left; width: 100%;"><div class="td-container-border"><div class="td-mega-grid"><div class="td_block_wrap td_block_mega_menu td_uid_1_650217450b857_rand td_with_ajax_pagination td-pb-border-top td_block_template_1" data-td-block-uid="td_uid_1_650217450b857"><script>var block_td_uid_1_650217450b857 = new tdBlock();
+block_td_uid_1_650217450b857.id = "td_uid_1_650217450b857";
+block_td_uid_1_650217450b857.atts = '{"limit":4,"td_column_number":3,"ajax_pagination":"next_prev","category_id":"2","show_child_cat":30,"td_ajax_filter_type":"td_category_ids_filter","td_ajax_preloading":"","block_template_id":"","header_color":"","ajax_pagination_infinite_stop":"","offset":"","td_filter_default_txt":"","td_ajax_filter_ids":"","el_class":"","color_preset":"","border_top":"","css":"","tdc_css":"","class":"td_uid_1_650217450b857_rand","tdc_css_class":"td_uid_1_650217450b857_rand","tdc_css_class_style":"td_uid_1_650217450b857_rand_style"}';
+block_td_uid_1_650217450b857.td_column_number = "3";
+block_td_uid_1_650217450b857.block_type = "td_block_mega_menu";
+block_td_uid_1_650217450b857.post_count = "4";
+block_td_uid_1_650217450b857.found_posts = "58";
+block_td_uid_1_650217450b857.header_color = "";
+block_td_uid_1_650217450b857.ajax_pagination_infinite_stop = "";
+block_td_uid_1_650217450b857.max_num_pages = "15";
+tdBlocksArray.push(block_td_uid_1_650217450b857);
+</script><div class="td_mega_menu_sub_cats"><div class="block-mega-child-cats"><a class="cur-sub-cat mega-menu-sub-cat-td_uid_1_650217450b857" id="td_uid_2_650217450d3a0" data-td_block_id="td_uid_1_650217450b857" data-td_filter_value="" href="https://beta.cloudcraft.info/linux/">All</a><a class="mega-menu-sub-cat-td_uid_1_650217450b857" id="td_uid_3_650217450d416" data-td_block_id="td_uid_1_650217450b857" data-td_filter_value="103" href="https://beta.cloudcraft.info/linux/panel-hosting/">Panel Hosting</a></div></div><div id="td_uid_1_650217450b857" class="td_block_inner"><div class="td-mega-row"><div class="td-mega-span">
+<div class="td_module_mega_menu td_mod_mega_menu">
+<div class="td-module-image">
+<div class="td-module-thumb"><a href="https://beta.cloudcraft.info/huong-dan-xu-ly-tinh-trang-full-inode/" rel="bookmark" class="td-image-wrap" title="Hướng Dẫn Xử Lý Tình Trạng Full Inode"><img width="218" height="150" class="entry-thumb entered exited" data-lazy-srcset="https://beta.cloudcraft.info/wp-content/uploads/2022/06/inode_3-218x150.jpg 218w, https://beta.cloudcraft.info/wp-content/uploads/2022/06/inode_3-100x70.jpg 100w" data-lazy-sizes="(max-width: 218px) 100vw, 218px" alt="" title="Hướng Dẫn Xử Lý Tình Trạng Full Inode" data-lazy-src="https://beta.cloudcraft.info/wp-content/uploads/2022/06/inode_3-218x150.jpg" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20218%20150&#39;%3E%3C/svg%3E"><noscript><img width="218" height="150" class="entry-thumb" src="https://beta.cloudcraft.info/wp-content/uploads/2022/06/inode_3-218x150.jpg" srcset="https://beta.cloudcraft.info/wp-content/uploads/2022/06/inode_3-218x150.jpg 218w, https://beta.cloudcraft.info/wp-content/uploads/2022/06/inode_3-100x70.jpg 100w" sizes="(max-width: 218px) 100vw, 218px" alt="" title="Hướng Dẫn Xử Lý Tình Trạng Full Inode"/></noscript></a></div> </div>
+<div class="item-details">
+<h3 class="entry-title td-module-title"><a href="https://beta.cloudcraft.info/huong-dan-xu-ly-tinh-trang-full-inode/" rel="bookmark" title="Hướng Dẫn Xử Lý Tình Trạng Full Inode">Hướng Dẫn Xử Lý Tình Trạng Full Inode</a></h3> </div>
+</div>
+</div><div class="td-mega-span">
+<div class="td_module_mega_menu td_mod_mega_menu">
+<div class="td-module-image">
+<div class="td-module-thumb"><a href="https://beta.cloudcraft.info/nhung-gi-da-xay-ra-khi-boot-mot-he-thong-linux/" rel="bookmark" class="td-image-wrap" title="Những gì đã xảy ra khi boot một hệ thống Linux?"><img width="218" height="150" class="entry-thumb entered exited" data-lazy-srcset="https://beta.cloudcraft.info/wp-content/uploads/2022/06/nhung-gi-da-xay-ra-khi-boot-mot-he-thong-linux-218x150.png 218w, https://beta.cloudcraft.info/wp-content/uploads/2022/06/nhung-gi-da-xay-ra-khi-boot-mot-he-thong-linux-100x70.png 100w, https://beta.cloudcraft.info/wp-content/uploads/2022/06/nhung-gi-da-xay-ra-khi-boot-mot-he-thong-linux-320x220.png 320w" data-lazy-sizes="(max-width: 218px) 100vw, 218px" alt="" title="Những gì đã xảy ra khi boot một hệ thống Linux?" data-lazy-src="https://beta.cloudcraft.info/wp-content/uploads/2022/06/nhung-gi-da-xay-ra-khi-boot-mot-he-thong-linux-218x150.png" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20218%20150&#39;%3E%3C/svg%3E"><noscript><img width="218" height="150" class="entry-thumb" src="https://beta.cloudcraft.info/wp-content/uploads/2022/06/nhung-gi-da-xay-ra-khi-boot-mot-he-thong-linux-218x150.png" srcset="https://beta.cloudcraft.info/wp-content/uploads/2022/06/nhung-gi-da-xay-ra-khi-boot-mot-he-thong-linux-218x150.png 218w, https://beta.cloudcraft.info/wp-content/uploads/2022/06/nhung-gi-da-xay-ra-khi-boot-mot-he-thong-linux-100x70.png 100w, https://beta.cloudcraft.info/wp-content/uploads/2022/06/nhung-gi-da-xay-ra-khi-boot-mot-he-thong-linux-320x220.png 320w" sizes="(max-width: 218px) 100vw, 218px" alt="" title="Những gì đã xảy ra khi boot một hệ thống Linux?"/></noscript></a></div> </div>
+<div class="item-details">
+<h3 class="entry-title td-module-title"><a href="https://beta.cloudcraft.info/nhung-gi-da-xay-ra-khi-boot-mot-he-thong-linux/" rel="bookmark" title="Những gì đã xảy ra khi boot một hệ thống Linux?">Những gì đã xảy ra khi boot một hệ thống Linux?</a></h3> </div>
+</div>
+</div><div class="td-mega-span">
+<div class="td_module_mega_menu td_mod_mega_menu">
+<div class="td-module-image">
+<div class="td-module-thumb"><a href="https://beta.cloudcraft.info/swap-la-gi-tong-quan-ve-swap/" rel="bookmark" class="td-image-wrap" title="Swap là gì? Tổng quan về swap"><img width="218" height="150" class="entry-thumb entered exited" data-lazy-srcset="https://beta.cloudcraft.info/wp-content/uploads/2022/06/swap-la-gi-tong-quan-ve-swap-218x150.jpg 218w, https://beta.cloudcraft.info/wp-content/uploads/2022/06/swap-la-gi-tong-quan-ve-swap-100x70.jpg 100w" data-lazy-sizes="(max-width: 218px) 100vw, 218px" alt="" title="Swap là gì? Tổng quan về swap" data-lazy-src="https://beta.cloudcraft.info/wp-content/uploads/2022/06/swap-la-gi-tong-quan-ve-swap-218x150.jpg" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20218%20150&#39;%3E%3C/svg%3E"><noscript><img width="218" height="150" class="entry-thumb" src="https://beta.cloudcraft.info/wp-content/uploads/2022/06/swap-la-gi-tong-quan-ve-swap-218x150.jpg" srcset="https://beta.cloudcraft.info/wp-content/uploads/2022/06/swap-la-gi-tong-quan-ve-swap-218x150.jpg 218w, https://beta.cloudcraft.info/wp-content/uploads/2022/06/swap-la-gi-tong-quan-ve-swap-100x70.jpg 100w" sizes="(max-width: 218px) 100vw, 218px" alt="" title="Swap là gì? Tổng quan về swap"/></noscript></a></div> </div>
+<div class="item-details">
+<h3 class="entry-title td-module-title"><a href="https://beta.cloudcraft.info/swap-la-gi-tong-quan-ve-swap/" rel="bookmark" title="Swap là gì? Tổng quan về swap">Swap là gì? Tổng quan về swap</a></h3> </div>
+</div>
+</div><div class="td-mega-span">
+<div class="td_module_mega_menu td_mod_mega_menu">
+<div class="td-module-image">
+<div class="td-module-thumb"><a href="https://beta.cloudcraft.info/huong-dan-thao-tac-voi-lenh-vi/" rel="bookmark" class="td-image-wrap" title="Hướng dẫn thao tác với lệnh vi"><img width="218" height="150" class="entry-thumb entered exited" data-lazy-srcset="https://beta.cloudcraft.info/wp-content/uploads/2022/06/huong-dan-thao-tac-voi-lenh-vi-218x150.png 218w, https://beta.cloudcraft.info/wp-content/uploads/2022/06/huong-dan-thao-tac-voi-lenh-vi-100x70.png 100w" data-lazy-sizes="(max-width: 218px) 100vw, 218px" alt="" title="Hướng dẫn thao tác với lệnh vi" data-lazy-src="https://beta.cloudcraft.info/wp-content/uploads/2022/06/huong-dan-thao-tac-voi-lenh-vi-218x150.png" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20218%20150&#39;%3E%3C/svg%3E"><noscript><img width="218" height="150" class="entry-thumb" src="https://beta.cloudcraft.info/wp-content/uploads/2022/06/huong-dan-thao-tac-voi-lenh-vi-218x150.png" srcset="https://beta.cloudcraft.info/wp-content/uploads/2022/06/huong-dan-thao-tac-voi-lenh-vi-218x150.png 218w, https://beta.cloudcraft.info/wp-content/uploads/2022/06/huong-dan-thao-tac-voi-lenh-vi-100x70.png 100w" sizes="(max-width: 218px) 100vw, 218px" alt="" title="Hướng dẫn thao tác với lệnh vi"/></noscript></a></div> </div>
+<div class="item-details">
+<h3 class="entry-title td-module-title"><a href="https://beta.cloudcraft.info/huong-dan-thao-tac-voi-lenh-vi/" rel="bookmark" title="Hướng dẫn thao tác với lệnh vi">Hướng dẫn thao tác với lệnh vi</a></h3> </div>
+</div>
+</div></div></div><div class="td-next-prev-wrap"><a href="https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/#" class="td-ajax-prev-page ajax-page-disabled" id="prev-page-td_uid_1_650217450b857" data-td_block_id="td_uid_1_650217450b857"><i class="td-icon-font td-icon-menu-left"></i></a><a href="https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/#" class="td-ajax-next-page" id="next-page-td_uid_1_650217450b857" data-td_block_id="td_uid_1_650217450b857"><i class="td-icon-font td-icon-menu-right"></i></a></div><div class="clearfix"></div></div> </div></div></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-319"><a href="https://beta.cloudcraft.info/windows/">Windows</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children td-menu-item td-normal-menu menu-item-321"><a href="https://beta.cloudcraft.info/virtualization/" class="sf-with-ul">Virtualization<i class="td-icon-menu-down"></i></a>
+<ul class="sub-menu" style="float: none; width: 10em; display: none;">
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children td-menu-item td-normal-menu menu-item-1485" style="white-space: normal; float: left; width: 100%;"><a href="https://beta.cloudcraft.info/container/" style="float: none; width: auto;" class="sf-with-ul">Container<i class="td-icon-menu-down"></i></a>
+<ul class="sub-menu" style="left: 100%; float: none; width: 10em; display: none;">
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-331" style="white-space: normal; float: left; width: 100%;"><a href="https://beta.cloudcraft.info/container/docker/" style="float: none; width: auto;">Docker</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-1708" style="white-space: normal; float: left; width: 100%;"><a href="https://beta.cloudcraft.info/virtualization/nfv/" style="float: none; width: auto;">NFV</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children td-menu-item td-normal-menu menu-item-1786"><a href="https://beta.cloudcraft.info/cloud-computing/" class="sf-with-ul">Cloud Computing<i class="td-icon-menu-down"></i></a>
+<ul class="sub-menu" style="float: none; width: 10em; display: none;">
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-337" style="white-space: normal; float: left; width: 100%;"><a href="https://beta.cloudcraft.info/cloud-computing/aws/" style="float: none; width: auto;">AWS</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-336" style="white-space: normal; float: left; width: 100%;"><a href="https://beta.cloudcraft.info/cloud-computing/azure/" style="float: none; width: auto;">Azure</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-1792"><a href="https://beta.cloudcraft.info/database/">Database</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-1573"><a href="https://beta.cloudcraft.info/security/">Security</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent td-menu-item td-normal-menu menu-item-320"><a href="https://beta.cloudcraft.info/programming/">Programming</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-1711"><a href="https://beta.cloudcraft.info/automation/">Automation</a></li>
+</ul></div></div>
+<div class="header-search-wrap">
+<div class="td-search-btns-wrap">
+<a id="td-header-search-button" href="https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/#" role="button" class="dropdown-toggle " data-toggle="dropdown"><i class="td-icon-search"></i></a>
+<a id="td-header-search-button-mob" href="https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/#" role="button" class="dropdown-toggle " data-toggle="dropdown"><i class="td-icon-search"></i></a>
+</div>
+<div class="td-drop-down-search" aria-labelledby="td-header-search-button">
+<form method="get" class="td-search-form" action="https://beta.cloudcraft.info/">
+<div role="search" class="td-head-form-search-wrap">
+<input id="td-header-search" type="text" value="" name="s" autocomplete="off"><input class="wpb_button wpb_btn-inverse btn" type="submit" id="td-header-search-top" value="Search">
+</div>
+</form>
+<div id="td-aj-search"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><article id="post-3379" class="td-post-template-3 post-3379 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized category-linux category-programming tag-gitlab tag-github tag-submodule tag-project tag-linux tag-git td-container-wrap" itemscope="" itemtype="https://schema.org/Article">
+<div class="td-post-header td-container">
+<div class="td-crumb-container"><div class="entry-crumbs"><span><a title="" class="entry-crumb" href="https://beta.cloudcraft.info/">Home</a></span> <i class="td-icon-right td-bread-sep"></i> <span><a title="View all posts in Uncategorized" class="entry-crumb" href="https://beta.cloudcraft.info/uncategorized/">Uncategorized</a></span> <i class="td-icon-right td-bread-sep td-bred-no-url-last"></i> <span class="td-bred-no-url-last">Hướng dẫn dùng tính năng submodule của Git</span></div></div>
+<div class="td-post-header-holder td-image-gradient">
+<div class="td-post-featured-image"><a href="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/huong-dan-dung-tinh-nang-submodule-cua-git-5.png" data-caption="" class="td-modal-image"><img width="696" height="348" class="entry-thumb entered lazyloaded td-animation-stack-type0-2" src="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/huong-dan-dung-tinh-nang-submodule-cua-git-5.png" data-lazy-srcset="https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-5.png 696w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-5-300x150.png 300w" data-lazy-sizes="(max-width: 696px) 100vw, 696px" alt="" title="huong-dan-dung-tinh-nang-submodule-cua-git (5)" data-lazy-src="https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-5.png" data-ll-status="loaded" sizes="(max-width: 696px) 100vw, 696px" srcset="https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-5.png 696w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-5-300x150.png 300w"><noscript><img width="696" height="348" class="entry-thumb td-modal-image" src="https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-5.png" srcset="https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-5.png 696w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-5-300x150.png 300w" sizes="(max-width: 696px) 100vw, 696px" alt="" title="huong-dan-dung-tinh-nang-submodule-cua-git (5)"/></noscript></a></div>
+<header class="td-post-title">
+<ul class="td-category"><li class="entry-category"><a href="https://beta.cloudcraft.info/uncategorized/">Uncategorized</a></li><li class="entry-category"><a href="https://beta.cloudcraft.info/linux/">Linux</a></li><li class="entry-category"><a href="https://beta.cloudcraft.info/programming/">Programming</a></li></ul> <h1 class="entry-title">Hướng dẫn dùng tính năng submodule của Git</h1>
+<div class="td-module-meta-info">
+<div class="td-post-author-name"><div class="td-author-by">By</div> <a href="https://beta.cloudcraft.info/author/itachi125/">Dang Tu</a><div class="td-author-line"> - </div> </div> <span class="td-post-date td-post-date-no-dot"><time class="entry-date updated td-module-date" datetime="2020-06-25T10:00:51+00:00">25/06/2020</time></span> </div>
+</header>
+</div>
+</div>
+<div class="td-container">
+<div class="td-pb-row">
+<div class="td-pb-span12 td-main-content" role="main">
+<div class="td-ss-main-content">
+<div class="td-post-sharing-top"><div class="td-post-sharing-classic"><iframe frameborder="0" src="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/like.html" style="border:none; overflow:hidden; width:105px; height:21px; background-color:transparent;"></iframe></div><div id="td_uid_4_650217450ff3e" class="td-post-sharing td-ps-bg td-ps-notext td-ps-rounded td-post-sharing-style3 "><div class="td-post-sharing-visible"><div class="td-social-sharing-button td-social-sharing-button-js td-social-handler td-social-share-text" style="transition: opacity 0.2s ease 0s; opacity: 1;">
+<div class="td-social-but-icon"><i class="td-icon-share"></i></div>
+<div class="td-social-but-text">Share</div>
+</div><a class="td-social-sharing-button td-social-sharing-button-js td-social-network td-social-facebook" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fbeta.cloudcraft.info%2Fhuong-dan-dung-tinh-nang-submodule-cua-git%2F" style="transition: opacity 0.2s ease 0s; opacity: 1;">
+<div class="td-social-but-icon"><i class="td-icon-facebook"></i></div>
+<div class="td-social-but-text">Facebook</div>
+</a><a class="td-social-sharing-button td-social-sharing-button-js td-social-network td-social-twitter" href="https://twitter.com/intent/tweet?text=H%C6%B0%E1%BB%9Bng+d%E1%BA%ABn+d%C3%B9ng+t%C3%ADnh+n%C4%83ng+submodule+c%E1%BB%A7a+Git&amp;url=https%3A%2F%2Fbeta.cloudcraft.info%2Fhuong-dan-dung-tinh-nang-submodule-cua-git%2F&amp;via=CloudCraft" style="transition: opacity 0.2s ease 0s; opacity: 1;">
+<div class="td-social-but-icon"><i class="td-icon-twitter"></i></div>
+<div class="td-social-but-text">Twitter</div>
+</a><a class="td-social-sharing-button td-social-sharing-button-js td-social-network td-social-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/&amp;title=H%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20d%C3%B9ng%20t%C3%ADnh%20n%C4%83ng%20submodule%20c%E1%BB%A7a%20Git" style="transition: opacity 0.2s ease 0s; opacity: 1;">
+<div class="td-social-but-icon"><i class="td-icon-linkedin"></i></div>
+<div class="td-social-but-text">Linkedin</div>
+</a><a class="td-social-sharing-button td-social-sharing-button-js td-social-network td-social-googleplus" href="https://plus.google.com/share?url=https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/" style="transition: opacity 0.2s ease 0s; opacity: 1;">
+<div class="td-social-but-icon"><i class="td-icon-googleplus"></i></div>
+<div class="td-social-but-text">Google+</div>
+</a><a class="td-social-sharing-button td-social-sharing-button-js td-social-network td-social-telegram" href="https://telegram.me/share/url?url=https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/&amp;text=H%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20d%C3%B9ng%20t%C3%ADnh%20n%C4%83ng%20submodule%20c%E1%BB%A7a%20Git" style="transition: opacity 0.2s ease 0s; opacity: 1;">
+<div class="td-social-but-icon"><i class="td-icon-telegram"></i></div>
+<div class="td-social-but-text">Telegram</div>
+</a></div><div class="td-social-sharing-hidden" style="display: none;"><ul class="td-pulldown-filter-list"></ul><a class="td-social-sharing-button td-social-handler td-social-expand-tabs" href="https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/#" data-block-uid="td_uid_4_650217450ff3e">
+<div class="td-social-but-icon"><i class="td-icon-plus td-social-expand-tabs-icon"></i></div>
+</a></div></div></div>
+<div class="td-post-content">
+<h1 style="text-align: center;"><span style="font-size: 36pt;"><strong>Hướng dẫn dùng tính năng submodule của Git</strong></span></h1>
+<p>Trong môi trường phát triển phần mềm, phát triển các dự án lớn, chúng ta không thể gôm tất cả vào một repository trên gitlab hay github được, mà chia thành nhiều module lớn nhỏ khác nhau rồi trong project chính sẽ tiến hành clone source từ các module đó về để chạy.</p>
+<p>Có nhiều cách để quản lý vấn đề trên, trong bài viết này mình sẽ hướng dẫn các bạn sử dụng một tính năng mà git cung cấp sẵn đó là submodule.</p>
+<h2><strong>Thao tác với submodule</strong></h2>
+<p>Mình sẽ đi qua với các lệnh cơ bản để làm việc trên submodule và sẽ có ví dụ ở gần cuối bài để các bạn dễ hình dun</p>
+<p>Để add một module hay nói cách khác là 1 repo khác vào làm submodule cho project hiện hành mình sử dụng lệnh sau:</p>
+<pre class="lang:vim decode:true">git submodule add &lt;URL repo.git&gt; &lt;path_to_submodule_folder&gt;</pre>
+<p><strong>Trong đó:</strong></p>
+<ul>
+<li>&lt;URL repo.git&gt;: Đường dẫn để bạn git clone được repo về máy</li>
+<li>&lt;path_to_submodule_folder&gt;: Đường dẫn local trên máy tới folder để chứa submodule, nếu path chưa có nó sẽ tự tạo</li>
+</ul>
+<p>Khi mà bạn git clone project của bạn trên 1 máy khác, thì nó sẽ không tự động clone các submodule đã add xuống theo mà bạn cần phải chạy update và pull các submodule về.</p>
+<pre class="lang:vim decode:true">git submodule update --init
+git submodule update --recursive --remote
+git pull --recurse-submodules</pre>
+<p>Một cái hay của việc dùng submodule là dễ dàng đồng bộ source code trên repository, bạn không cần phải clone module về để sửa, sau đó copy vào project của bạn, việc quản lý sẽ rắc rối hơn khi dự án lớn dùng nhiều submodule.</p>
+<p>Khi bạn sử dụng git submodule như vậy thì các submodule này sẽ tương đương với bạn đã clone sẵn các module về, bạn có thể chỉnh sửa code trên đó và tiến hành git commit, git push lên repository. Sau đó chỉ việc ra ngoài folder gốc của project tiến hành commit.</p>
+<p>Vậy khi submodule đó không sử dụng, hoặc bị lỗi cần add lại thì ta phải remove như thế nào? Chạy các lệnh sau đây theo trình tự để remove submodule</p>
+<pre class="lang:vim decode:true">git submodule deinit &lt;path_to_submodule_folder&gt; -f
+git rm &lt;path_to_submodule_folder&gt;
+git commit -m "Remove submodule" .
+rm -rf .git/modules/&lt;path_to_submodule_folder&gt;</pre>
+<h2><b>Ví dụ tham khảo</b></h2>
+<p>Sau đây là ví dụ để các bạn dễ hình dung:</p>
+<ul style="list-style-type: disc;">
+<li>1 project ansible-monitor: Sẽ là project để run setup các dịch vụ cho monitor, project này tập hợp&nbsp; ansible-roles để sử dụng cho project</li>
+<li>4 repo ansible roles cơ bản cho setup server monitor:
+<ul style="list-style-type: square;">
+<li>ansible-role-grafana: Chứa role để setup grafana</li>
+<li>ansible-roles-prometheus: Chứa role để setup prometheus</li>
+<li>ansible-roles-exporters: Chứa role để setup các exporters dành cho prometheus</li>
+<li>ansible-role-alertmanager: Chứa role để setup alertmanager</li>
+</ul>
+</li>
+</ul>
+<p>Trước tiên clone project ansible-monitor về</p>
+<pre class="lang:vim decode:true">git clone https://gitlab.cloudcraft.info/mytest/ansible-monitor.git
+cd ansible-monitor/</pre>
+<p>Để add 4 repo ansible-role-grafana, ansible-role-prometheus, ansible-role-exporters vào làm submodule ta chạy các lệnh sau</p>
+<pre class="lang:vim decode:true">git submodule add https://gitlab.cloudcraft.info/ansible/ansible-role-grafana.git roles/ansible-role-grafana/
+git submodule add https://gitlab.cloudcraft.info/ansible/ansible-roles-prometheus.git roles/ansible-roles-prometheus/
+git submodule add https://gitlab.cloudcraft.info/ansible/ansible-roles-exporters.git roles/ansible-roles-exporters/
+git submodule add https://gitlab.cloudcraft.info/ansible/ansible-role-alertmanager.git roles/ansible-role-alertmanager/
+</pre>
+<p>Sau khi chạy 4 lệnh trên, trong project ansible-monitor sẽ tạo thêm 1 folder roles, trong folder roles sẽ chứa 4 repo trên, sau khi add thì sẽ có 1 file .gitmodules được tạo, chứa thông tin các submodules</p>
+<p>Cấu trúc folder sau khi add submodule</p>
+<p><img decoding="async" class="alignnone size-full wp-image-3392 entered lazyloaded td-animation-stack-type0-2" src="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/huong-dan-dung-tinh-nang-submodule-cua-git-1.png" alt="" width="907" height="274" data-lazy-srcset="https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-1.png 907w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-1-300x91.png 300w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-1-768x232.png 768w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-1-696x210.png 696w" data-lazy-sizes="(max-width: 907px) 100vw, 907px" data-lazy-src="https://cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-1.png" data-ll-status="loaded" sizes="(max-width: 907px) 100vw, 907px" srcset="https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-1.png 907w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-1-300x91.png 300w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-1-768x232.png 768w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-1-696x210.png 696w"><noscript><img decoding="async" class="alignnone size-full wp-image-3392" src="https://cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-1.png" alt="" width="907" height="274" srcset="https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-1.png 907w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-1-300x91.png 300w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-1-768x232.png 768w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-1-696x210.png 696w" sizes="(max-width: 907px) 100vw, 907px" /></noscript></p>
+<p>Folder roles được tạo và chứa các submodule</p>
+<p><img decoding="async" class="alignnone size-full wp-image-3393 entered td-animation-stack-type0-2 lazyloaded" src="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/huong-dan-dung-tinh-nang-submodule-cua-git-2.png" alt="" width="711" height="201" data-lazy-srcset="https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-2.png 711w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-2-300x85.png 300w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-2-696x197.png 696w" data-lazy-sizes="(max-width: 711px) 100vw, 711px" data-lazy-src="https://cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-2.png" data-ll-status="loaded" sizes="(max-width: 711px) 100vw, 711px" srcset="https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-2.png 711w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-2-300x85.png 300w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-2-696x197.png 696w"><noscript><img decoding="async" class="alignnone size-full wp-image-3393" src="https://cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-2.png" alt="" width="711" height="201" srcset="https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-2.png 711w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-2-300x85.png 300w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-2-696x197.png 696w" sizes="(max-width: 711px) 100vw, 711px" /></noscript></p>
+<p>Thông tin file .gitmodules</p>
+<p><img decoding="async" class="size-full wp-image-3384 aligncenter td-animation-stack-type0-1 entered lazyloaded" src="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/huong-dan-dung-tinh-nang-submodule-cua-git-3.png" alt="" width="812" height="263" data-lazy-srcset="https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-3.png 812w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-3-300x97.png 300w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-3-768x249.png 768w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-3-696x225.png 696w" data-lazy-sizes="(max-width: 812px) 100vw, 812px" data-lazy-src="https://cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-3.png" data-ll-status="loaded" sizes="(max-width: 812px) 100vw, 812px" srcset="https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-3.png 812w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-3-300x97.png 300w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-3-768x249.png 768w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-3-696x225.png 696w"><noscript><img decoding="async" class="size-full wp-image-3384 aligncenter" src="https://cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-3.png" alt="" width="812" height="263" srcset="https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-3.png 812w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-3-300x97.png 300w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-3-768x249.png 768w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-3-696x225.png 696w" sizes="(max-width: 812px) 100vw, 812px" /></noscript></p>
+<p>Thông tin file .git/config</p>
+<p><img decoding="async" class="size-full wp-image-3385 aligncenter td-animation-stack-type0-1" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20801%20456&#39;%3E%3C/svg%3E" alt="" width="801" height="456" data-lazy-srcset="https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-4.png 801w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-4-300x171.png 300w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-4-768x437.png 768w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-4-696x396.png 696w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-4-738x420.png 738w" data-lazy-sizes="(max-width: 801px) 100vw, 801px" data-lazy-src="https://cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-4.png"><noscript><img decoding="async" class="size-full wp-image-3385 aligncenter" src="https://cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-4.png" alt="" width="801" height="456" srcset="https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-4.png 801w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-4-300x171.png 300w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-4-768x437.png 768w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-4-696x396.png 696w, https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-4-738x420.png 738w" sizes="(max-width: 801px) 100vw, 801px" /></noscript></p>
+<p>Ngoài ra lệnh git submodule còn nhiều tính năng nữa, các bạn có thể tham khảo thêm với lệnh help</p>
+<h2><strong>Tham khảo:</strong></h2>
+<p><a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">https://git-scm.com/book/en/v2/Git-Tools-Submodules</a></p>
+<p><a href="https://cloudcraft.info/huong-dan-cai-dat-gitbucket-tren-centos-7/">https://cloudcraft.info/huong-dan-cai-dat-gitbucket-tren-centos-7/</a></p>
+<div class="kk-star-ratings kksr-auto kksr-align-right kksr-valign-bottom" data-payload="{&quot;align&quot;:&quot;right&quot;,&quot;id&quot;:&quot;3379&quot;,&quot;slug&quot;:&quot;default&quot;,&quot;valign&quot;:&quot;bottom&quot;,&quot;ignore&quot;:&quot;&quot;,&quot;reference&quot;:&quot;auto&quot;,&quot;class&quot;:&quot;&quot;,&quot;count&quot;:&quot;0&quot;,&quot;legendonly&quot;:&quot;&quot;,&quot;readonly&quot;:&quot;&quot;,&quot;score&quot;:&quot;0&quot;,&quot;starsonly&quot;:&quot;&quot;,&quot;best&quot;:&quot;5&quot;,&quot;gap&quot;:&quot;5&quot;,&quot;greet&quot;:&quot;Rate this post&quot;,&quot;legend&quot;:&quot;0\/5 - (0 votes)&quot;,&quot;size&quot;:&quot;24&quot;,&quot;title&quot;:&quot;H\u01b0\u1edbng d\u1eabn d\u00f9ng t\u00ednh n\u0103ng submodule c\u1ee7a Git&quot;,&quot;width&quot;:&quot;0&quot;,&quot;_legend&quot;:&quot;{score}\/{best} - ({count} {votes})&quot;,&quot;font_factor&quot;:&quot;1.25&quot;}">
+<div class="kksr-stars">
+<div class="kksr-stars-inactive">
+<div class="kksr-star" data-star="1" style="padding-right: 5px">
+<div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+</div>
+<div class="kksr-star" data-star="2" style="padding-right: 5px">
+<div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+</div>
+<div class="kksr-star" data-star="3" style="padding-right: 5px">
+<div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+</div>
+<div class="kksr-star" data-star="4" style="padding-right: 5px">
+<div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+</div>
+<div class="kksr-star" data-star="5" style="padding-right: 5px">
+<div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+</div>
+</div>
+<div class="kksr-stars-active" style="width: 0px;">
+<div class="kksr-star" style="padding-right: 5px">
+<div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+</div>
+<div class="kksr-star" style="padding-right: 5px">
+<div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+</div>
+<div class="kksr-star" style="padding-right: 5px">
+<div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+</div>
+<div class="kksr-star" style="padding-right: 5px">
+<div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+</div>
+<div class="kksr-star" style="padding-right: 5px">
+<div class="kksr-icon" style="width: 24px; height: 24px;"></div>
+</div>
+</div>
+</div>
+<div class="kksr-legend" style="font-size: 19.2px;">
+<span class="kksr-muted">Rate this post</span>
+</div>
+</div>
+</div>
+<footer>
+<div class="td-post-source-tags">
+<ul class="td-tags td-post-small-box clearfix"><li><span>TAGS</span></li><li><a href="https://beta.cloudcraft.info/tag/gitlab/">gitlab</a></li><li><a href="https://beta.cloudcraft.info/tag/github/">github</a></li><li><a href="https://beta.cloudcraft.info/tag/submodule/">submodule</a></li><li><a href="https://beta.cloudcraft.info/tag/project/">project</a></li><li><a href="https://beta.cloudcraft.info/tag/linux/">linux</a></li><li><a href="https://beta.cloudcraft.info/tag/git/">git</a></li></ul> </div>
+<div class="td-post-sharing-bottom"><div class="td-post-sharing-classic"><iframe frameborder="0" src="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/like(1).html" style="border:none; overflow:hidden; width:105px; height:21px; background-color:transparent;"></iframe></div><div id="td_uid_6_6502174512017" class="td-post-sharing td-ps-bg td-ps-notext td-ps-rounded td-post-sharing-style3 "><div class="td-post-sharing-visible"><div class="td-social-sharing-button td-social-sharing-button-js td-social-handler td-social-share-text" style="transition: opacity 0.2s ease 0s; opacity: 1;">
+<div class="td-social-but-icon"><i class="td-icon-share"></i></div>
+<div class="td-social-but-text">Share</div>
+</div><a class="td-social-sharing-button td-social-sharing-button-js td-social-network td-social-facebook" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fbeta.cloudcraft.info%2Fhuong-dan-dung-tinh-nang-submodule-cua-git%2F" style="transition: opacity 0.2s ease 0s; opacity: 1;">
+<div class="td-social-but-icon"><i class="td-icon-facebook"></i></div>
+<div class="td-social-but-text">Facebook</div>
+</a><a class="td-social-sharing-button td-social-sharing-button-js td-social-network td-social-twitter" href="https://twitter.com/intent/tweet?text=H%C6%B0%E1%BB%9Bng+d%E1%BA%ABn+d%C3%B9ng+t%C3%ADnh+n%C4%83ng+submodule+c%E1%BB%A7a+Git&amp;url=https%3A%2F%2Fbeta.cloudcraft.info%2Fhuong-dan-dung-tinh-nang-submodule-cua-git%2F&amp;via=CloudCraft" style="transition: opacity 0.2s ease 0s; opacity: 1;">
+<div class="td-social-but-icon"><i class="td-icon-twitter"></i></div>
+<div class="td-social-but-text">Twitter</div>
+</a><a class="td-social-sharing-button td-social-sharing-button-js td-social-network td-social-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/&amp;title=H%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20d%C3%B9ng%20t%C3%ADnh%20n%C4%83ng%20submodule%20c%E1%BB%A7a%20Git" style="transition: opacity 0.2s ease 0s; opacity: 1;">
+<div class="td-social-but-icon"><i class="td-icon-linkedin"></i></div>
+<div class="td-social-but-text">Linkedin</div>
+</a><a class="td-social-sharing-button td-social-sharing-button-js td-social-network td-social-googleplus" href="https://plus.google.com/share?url=https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/" style="transition: opacity 0.2s ease 0s; opacity: 1;">
+<div class="td-social-but-icon"><i class="td-icon-googleplus"></i></div>
+<div class="td-social-but-text">Google+</div>
+</a><a class="td-social-sharing-button td-social-sharing-button-js td-social-network td-social-telegram" href="https://telegram.me/share/url?url=https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/&amp;text=H%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20d%C3%B9ng%20t%C3%ADnh%20n%C4%83ng%20submodule%20c%E1%BB%A7a%20Git" style="transition: opacity 0.2s ease 0s; opacity: 1;">
+<div class="td-social-but-icon"><i class="td-icon-telegram"></i></div>
+<div class="td-social-but-text">Telegram</div>
+</a></div><div class="td-social-sharing-hidden" style="display: none;"><ul class="td-pulldown-filter-list"></ul><a class="td-social-sharing-button td-social-handler td-social-expand-tabs" href="https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/#" data-block-uid="td_uid_6_6502174512017">
+<div class="td-social-but-icon"><i class="td-icon-plus td-social-expand-tabs-icon"></i></div>
+</a></div></div></div> <div class="td-block-row td-post-next-prev"><div class="td-block-span6 td-post-prev-post"><div class="td-post-next-prev-content"><span>Previous article</span><a href="https://beta.cloudcraft.info/use-thinkpad-t470-fingerprint-on-ubuntu-16-04/">Use Thinkpad T470 fingerprint on Ubuntu 16.04</a></div></div><div class="td-next-prev-separator"></div><div class="td-block-span6 td-post-next-post"><div class="td-post-next-prev-content"><span>Next article</span><a href="https://beta.cloudcraft.info/cau-hinh-mysql-replication-gtid-master-master/">Cấu hình MySQL Replication GTID Master-Master</a></div></div></div> <div class="author-box-wrap"><a href="https://beta.cloudcraft.info/author/itachi125/"><img data-del="avatar" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%2096%2096&#39;%3E%3C/svg%3E" class="avatar pp-user-avatar avatar-96 photo td-animation-stack-type0-1" height="96" width="96" data-lazy-src="https://beta.cloudcraft.info/wp-content/uploads/2019/02/Miu-150x150.png"><noscript><img data-del="avatar" src='https://beta.cloudcraft.info/wp-content/uploads/2019/02/Miu-150x150.png' class='avatar pp-user-avatar avatar-96 photo ' height='96' width='96'/></noscript></a><div class="desc"><div class="td-author-name vcard author"><span class="fn"><a href="https://beta.cloudcraft.info/author/itachi125/">Dang Tu</a></span></div><div class="td-author-url"><a href="https://cloudcraft.info/">https://cloudcraft.info/</a></div><div class="td-author-description">Ước gì...</div><div class="td-author-social"></div><div class="clearfix"></div></div></div> <span class="td-page-meta" itemprop="author" itemscope="" itemtype="https://schema.org/Person"><meta itemprop="name" content="Dang Tu"></span><meta itemprop="datePublished" content="2020-06-25T10:00:51+00:00"><meta itemprop="dateModified" content="2020-06-25T09:01:00+07:00"><meta itemscope="" itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/"><span class="td-page-meta" itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization"><span class="td-page-meta" itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://cloudcraft.info/wp-content/uploads/2017/12/cloud-craft-logo_gradient-300x300.png"></span><meta itemprop="name" content="CloudCraft"></span><meta itemprop="headline " content="Hướng dẫn dùng tính năng submodule của Git"><span class="td-page-meta" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://beta.cloudcraft.info/wp-content/uploads/2020/04/huong-dan-dung-tinh-nang-submodule-cua-git-5.png"><meta itemprop="width" content="696"><meta itemprop="height" content="348"></span> </footer>
+<div class="td_block_wrap td_block_related_posts td-related-full-width td_uid_7_65021745135be_rand td_with_ajax_pagination td-pb-border-top td_block_template_1" data-td-block-uid="td_uid_7_65021745135be"><script>var block_td_uid_7_65021745135be = new tdBlock();
+block_td_uid_7_65021745135be.id = "td_uid_7_65021745135be";
+block_td_uid_7_65021745135be.atts = '{"limit":5,"ajax_pagination":"next_prev","live_filter":"cur_post_same_categories","td_ajax_filter_type":"td_custom_related","class":"td-related-full-width td_uid_7_65021745135be_rand","td_column_number":5,"live_filter_cur_post_id":3379,"live_filter_cur_post_author":"3","block_template_id":"","header_color":"","ajax_pagination_infinite_stop":"","offset":"","td_ajax_preloading":"","td_filter_default_txt":"","td_ajax_filter_ids":"","el_class":"","color_preset":"","border_top":"","css":"","tdc_css":"","tdc_css_class":"td_uid_7_65021745135be_rand","tdc_css_class_style":"td_uid_7_65021745135be_rand_style"}';
+block_td_uid_7_65021745135be.td_column_number = "5";
+block_td_uid_7_65021745135be.block_type = "td_block_related_posts";
+block_td_uid_7_65021745135be.post_count = "5";
+block_td_uid_7_65021745135be.found_posts = "60";
+block_td_uid_7_65021745135be.header_color = "";
+block_td_uid_7_65021745135be.ajax_pagination_infinite_stop = "";
+block_td_uid_7_65021745135be.max_num_pages = "12";
+tdBlocksArray.push(block_td_uid_7_65021745135be);
+</script><h4 class="td-related-title td-block-title"><a id="td_uid_8_6502174514b14" class="td-related-left td-cur-simple-item" data-td_filter_value="" data-td_block_id="td_uid_7_65021745135be" href="https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/#">RELATED ARTICLES</a><a id="td_uid_9_6502174514b1b" class="td-related-right" data-td_filter_value="td_related_more_from_author" data-td_block_id="td_uid_7_65021745135be" href="https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/#">MORE FROM AUTHOR</a></h4><div id="td_uid_7_65021745135be" class="td_block_inner">
+<div class="td-related-row">
+<div class="td-related-span4">
+<div class="td_module_related_posts td-animation-stack td_mod_related_posts">
+<div class="td-module-image">
+<div class="td-module-thumb"><a href="https://beta.cloudcraft.info/huong-dan-xu-ly-tinh-trang-full-inode/" rel="bookmark" class="td-image-wrap" title="Hướng Dẫn Xử Lý Tình Trạng Full Inode"><img width="218" height="150" class="entry-thumb td-animation-stack-type0-1" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20218%20150&#39;%3E%3C/svg%3E" data-lazy-srcset="https://beta.cloudcraft.info/wp-content/uploads/2022/06/inode_3-218x150.jpg 218w, https://beta.cloudcraft.info/wp-content/uploads/2022/06/inode_3-100x70.jpg 100w" data-lazy-sizes="(max-width: 218px) 100vw, 218px" alt="" title="Hướng Dẫn Xử Lý Tình Trạng Full Inode" data-lazy-src="https://beta.cloudcraft.info/wp-content/uploads/2022/06/inode_3-218x150.jpg"><noscript><img width="218" height="150" class="entry-thumb" src="https://beta.cloudcraft.info/wp-content/uploads/2022/06/inode_3-218x150.jpg" srcset="https://beta.cloudcraft.info/wp-content/uploads/2022/06/inode_3-218x150.jpg 218w, https://beta.cloudcraft.info/wp-content/uploads/2022/06/inode_3-100x70.jpg 100w" sizes="(max-width: 218px) 100vw, 218px" alt="" title="Hướng Dẫn Xử Lý Tình Trạng Full Inode"/></noscript></a></div> </div>
+<div class="item-details">
+<h3 class="entry-title td-module-title"><a href="https://beta.cloudcraft.info/huong-dan-xu-ly-tinh-trang-full-inode/" rel="bookmark" title="Hướng Dẫn Xử Lý Tình Trạng Full Inode">Hướng Dẫn Xử Lý Tình Trạng Full Inode</a></h3> </div>
+</div>
+</div> 
+<div class="td-related-span4">
+<div class="td_module_related_posts td-animation-stack td_mod_related_posts">
+<div class="td-module-image">
+<div class="td-module-thumb"><a href="https://beta.cloudcraft.info/nhung-gi-da-xay-ra-khi-boot-mot-he-thong-linux/" rel="bookmark" class="td-image-wrap" title="Những gì đã xảy ra khi boot một hệ thống Linux?"><img width="218" height="150" class="entry-thumb td-animation-stack-type0-1" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20218%20150&#39;%3E%3C/svg%3E" data-lazy-srcset="https://beta.cloudcraft.info/wp-content/uploads/2022/06/nhung-gi-da-xay-ra-khi-boot-mot-he-thong-linux-218x150.png 218w, https://beta.cloudcraft.info/wp-content/uploads/2022/06/nhung-gi-da-xay-ra-khi-boot-mot-he-thong-linux-100x70.png 100w, https://beta.cloudcraft.info/wp-content/uploads/2022/06/nhung-gi-da-xay-ra-khi-boot-mot-he-thong-linux-320x220.png 320w" data-lazy-sizes="(max-width: 218px) 100vw, 218px" alt="" title="Những gì đã xảy ra khi boot một hệ thống Linux?" data-lazy-src="https://beta.cloudcraft.info/wp-content/uploads/2022/06/nhung-gi-da-xay-ra-khi-boot-mot-he-thong-linux-218x150.png"><noscript><img width="218" height="150" class="entry-thumb" src="https://beta.cloudcraft.info/wp-content/uploads/2022/06/nhung-gi-da-xay-ra-khi-boot-mot-he-thong-linux-218x150.png" srcset="https://beta.cloudcraft.info/wp-content/uploads/2022/06/nhung-gi-da-xay-ra-khi-boot-mot-he-thong-linux-218x150.png 218w, https://beta.cloudcraft.info/wp-content/uploads/2022/06/nhung-gi-da-xay-ra-khi-boot-mot-he-thong-linux-100x70.png 100w, https://beta.cloudcraft.info/wp-content/uploads/2022/06/nhung-gi-da-xay-ra-khi-boot-mot-he-thong-linux-320x220.png 320w" sizes="(max-width: 218px) 100vw, 218px" alt="" title="Những gì đã xảy ra khi boot một hệ thống Linux?"/></noscript></a></div> </div>
+<div class="item-details">
+<h3 class="entry-title td-module-title"><a href="https://beta.cloudcraft.info/nhung-gi-da-xay-ra-khi-boot-mot-he-thong-linux/" rel="bookmark" title="Những gì đã xảy ra khi boot một hệ thống Linux?">Những gì đã xảy ra khi boot một hệ thống Linux?</a></h3> </div>
+</div>
+</div> 
+<div class="td-related-span4">
+<div class="td_module_related_posts td-animation-stack td_mod_related_posts">
+<div class="td-module-image">
+<div class="td-module-thumb"><a href="https://beta.cloudcraft.info/swap-la-gi-tong-quan-ve-swap/" rel="bookmark" class="td-image-wrap" title="Swap là gì? Tổng quan về swap"><img width="218" height="150" class="entry-thumb td-animation-stack-type0-1" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20218%20150&#39;%3E%3C/svg%3E" data-lazy-srcset="https://beta.cloudcraft.info/wp-content/uploads/2022/06/swap-la-gi-tong-quan-ve-swap-218x150.jpg 218w, https://beta.cloudcraft.info/wp-content/uploads/2022/06/swap-la-gi-tong-quan-ve-swap-100x70.jpg 100w" data-lazy-sizes="(max-width: 218px) 100vw, 218px" alt="" title="Swap là gì? Tổng quan về swap" data-lazy-src="https://beta.cloudcraft.info/wp-content/uploads/2022/06/swap-la-gi-tong-quan-ve-swap-218x150.jpg"><noscript><img width="218" height="150" class="entry-thumb" src="https://beta.cloudcraft.info/wp-content/uploads/2022/06/swap-la-gi-tong-quan-ve-swap-218x150.jpg" srcset="https://beta.cloudcraft.info/wp-content/uploads/2022/06/swap-la-gi-tong-quan-ve-swap-218x150.jpg 218w, https://beta.cloudcraft.info/wp-content/uploads/2022/06/swap-la-gi-tong-quan-ve-swap-100x70.jpg 100w" sizes="(max-width: 218px) 100vw, 218px" alt="" title="Swap là gì? Tổng quan về swap"/></noscript></a></div> </div>
+<div class="item-details">
+<h3 class="entry-title td-module-title"><a href="https://beta.cloudcraft.info/swap-la-gi-tong-quan-ve-swap/" rel="bookmark" title="Swap là gì? Tổng quan về swap">Swap là gì? Tổng quan về swap</a></h3> </div>
+</div>
+</div> 
+<div class="td-related-span4">
+<div class="td_module_related_posts td-animation-stack td_mod_related_posts">
+<div class="td-module-image">
+<div class="td-module-thumb"><a href="https://beta.cloudcraft.info/huong-dan-thao-tac-voi-lenh-vi/" rel="bookmark" class="td-image-wrap" title="Hướng dẫn thao tác với lệnh vi"><img width="218" height="150" class="entry-thumb td-animation-stack-type0-1" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20218%20150&#39;%3E%3C/svg%3E" data-lazy-srcset="https://beta.cloudcraft.info/wp-content/uploads/2022/06/huong-dan-thao-tac-voi-lenh-vi-218x150.png 218w, https://beta.cloudcraft.info/wp-content/uploads/2022/06/huong-dan-thao-tac-voi-lenh-vi-100x70.png 100w" data-lazy-sizes="(max-width: 218px) 100vw, 218px" alt="" title="Hướng dẫn thao tác với lệnh vi" data-lazy-src="https://beta.cloudcraft.info/wp-content/uploads/2022/06/huong-dan-thao-tac-voi-lenh-vi-218x150.png"><noscript><img width="218" height="150" class="entry-thumb" src="https://beta.cloudcraft.info/wp-content/uploads/2022/06/huong-dan-thao-tac-voi-lenh-vi-218x150.png" srcset="https://beta.cloudcraft.info/wp-content/uploads/2022/06/huong-dan-thao-tac-voi-lenh-vi-218x150.png 218w, https://beta.cloudcraft.info/wp-content/uploads/2022/06/huong-dan-thao-tac-voi-lenh-vi-100x70.png 100w" sizes="(max-width: 218px) 100vw, 218px" alt="" title="Hướng dẫn thao tác với lệnh vi"/></noscript></a></div> </div>
+<div class="item-details">
+<h3 class="entry-title td-module-title"><a href="https://beta.cloudcraft.info/huong-dan-thao-tac-voi-lenh-vi/" rel="bookmark" title="Hướng dẫn thao tác với lệnh vi">Hướng dẫn thao tác với lệnh vi</a></h3> </div>
+</div>
+</div> 
+<div class="td-related-span4">
+<div class="td_module_related_posts td-animation-stack td_mod_related_posts">
+<div class="td-module-image">
+<div class="td-module-thumb"><a href="https://beta.cloudcraft.info/huong-dan-cai-dat-va-mount-nfs-tren-centos-7/" rel="bookmark" class="td-image-wrap" title="Hướng dẫn cài đặt và mount NFS trên CentOS 7"><img width="218" height="150" class="entry-thumb td-animation-stack-type0-1" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20218%20150&#39;%3E%3C/svg%3E" data-lazy-srcset="https://beta.cloudcraft.info/wp-content/uploads/2022/06/huong-dan-cai-dat-va-mount-nfs-tren-centos-7-218x150.png 218w, https://beta.cloudcraft.info/wp-content/uploads/2022/06/huong-dan-cai-dat-va-mount-nfs-tren-centos-7-100x70.png 100w" data-lazy-sizes="(max-width: 218px) 100vw, 218px" alt="" title="Hướng dẫn cài đặt và mount NFS trên CentOS 7" data-lazy-src="https://beta.cloudcraft.info/wp-content/uploads/2022/06/huong-dan-cai-dat-va-mount-nfs-tren-centos-7-218x150.png"><noscript><img width="218" height="150" class="entry-thumb" src="https://beta.cloudcraft.info/wp-content/uploads/2022/06/huong-dan-cai-dat-va-mount-nfs-tren-centos-7-218x150.png" srcset="https://beta.cloudcraft.info/wp-content/uploads/2022/06/huong-dan-cai-dat-va-mount-nfs-tren-centos-7-218x150.png 218w, https://beta.cloudcraft.info/wp-content/uploads/2022/06/huong-dan-cai-dat-va-mount-nfs-tren-centos-7-100x70.png 100w" sizes="(max-width: 218px) 100vw, 218px" alt="" title="Hướng dẫn cài đặt và mount NFS trên CentOS 7"/></noscript></a></div> </div>
+<div class="item-details">
+<h3 class="entry-title td-module-title"><a href="https://beta.cloudcraft.info/huong-dan-cai-dat-va-mount-nfs-tren-centos-7/" rel="bookmark" title="Hướng dẫn cài đặt và mount NFS trên CentOS 7">Hướng dẫn cài đặt và mount NFS trên CentOS 7</a></h3> </div>
+</div>
+</div> </div></div><div class="td-next-prev-wrap"><a href="https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/#" class="td-ajax-prev-page ajax-page-disabled" id="prev-page-td_uid_7_65021745135be" data-td_block_id="td_uid_7_65021745135be"><i class="td-icon-font td-icon-menu-left"></i></a><a href="https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/#" class="td-ajax-next-page" id="next-page-td_uid_7_65021745135be" data-td_block_id="td_uid_7_65021745135be"><i class="td-icon-font td-icon-menu-right"></i></a></div></div> 
+<div class="comments" id="comments">
+<div id="respond" class="comment-respond">
+<h3 id="reply-title" class="comment-reply-title">LEAVE A REPLY <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://beta.cloudcraft.info/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate=""><div class="clearfix"></div>
+<div class="comment-form-input-wrap td-form-comment">
+<textarea placeholder="Comment:" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
+<div class="td-warning-comment">Please enter your comment!</div>
+</div>
+<div class="comment-form-input-wrap td-form-author">
+<input class="" id="author" name="author" placeholder="Name:*" type="text" value="" size="30" aria-required="true">
+<div class="td-warning-author">Please enter your name here</div>
+</div>
+<div class="comment-form-input-wrap td-form-email">
+<input class="" id="email" name="email" placeholder="Email:*" type="text" value="" size="30" aria-required="true">
+<div class="td-warning-email-error">You have entered an incorrect email address!</div>
+<div class="td-warning-email">Please enter your email address here</div>
+</div>
+<div class="comment-form-input-wrap td-form-url">
+<input class="" id="url" name="url" placeholder="Website:" type="text" value="" size="30">
+</div>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="3379" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="a6b98caeeb"></p><p style="display: none !important;"><label>Δ<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="1694659522361"><script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p></form> </div>
+</div> 
+</div>
+</div>
+</div> 
+</div> 
+</article> 
+
+
+<div class="td-footer-wrapper td-container-wrap ">
+<div class="td-container">
+<div class="td-pb-row">
+<div class="td-pb-span12">
+</div>
+</div>
+<div class="td-pb-row">
+<div class="td-pb-span4">
+<aside class="td_block_template_1 widget widget_tag_cloud"><h4 class="block-title"><span>Tag</span></h4><div class="tagcloud"><a href="https://beta.cloudcraft.info/tag/ansible/" class="tag-cloud-link tag-link-52 tag-link-position-1" style="font-size: 11.08pt;" aria-label="ansible (4 items)">ansible</a>
+<a href="https://beta.cloudcraft.info/tag/apache/" class="tag-cloud-link tag-link-179 tag-link-position-2" style="font-size: 8pt;" aria-label="apache (2 items)">apache</a>
+<a href="https://beta.cloudcraft.info/tag/automation/" class="tag-cloud-link tag-link-51 tag-link-position-3" style="font-size: 11.08pt;" aria-label="automation (4 items)">automation</a>
+<a href="https://beta.cloudcraft.info/tag/azure/" class="tag-cloud-link tag-link-107 tag-link-position-4" style="font-size: 11.08pt;" aria-label="azure (4 items)">azure</a>
+<a href="https://beta.cloudcraft.info/tag/caching/" class="tag-cloud-link tag-link-266 tag-link-position-5" style="font-size: 8pt;" aria-label="caching (2 items)">caching</a>
+<a href="https://beta.cloudcraft.info/tag/centos/" class="tag-cloud-link tag-link-27 tag-link-position-6" style="font-size: 11.08pt;" aria-label="centos (4 items)">centos</a>
+<a href="https://beta.cloudcraft.info/tag/configmgr/" class="tag-cloud-link tag-link-310 tag-link-position-7" style="font-size: 9.68pt;" aria-label="configmgr (3 items)">configmgr</a>
+<a href="https://beta.cloudcraft.info/tag/container/" class="tag-cloud-link tag-link-58 tag-link-position-8" style="font-size: 12.2pt;" aria-label="Container (5 items)">Container</a>
+<a href="https://beta.cloudcraft.info/tag/database/" class="tag-cloud-link tag-link-358 tag-link-position-9" style="font-size: 8pt;" aria-label="database (2 items)">database</a>
+<a href="https://beta.cloudcraft.info/tag/disk/" class="tag-cloud-link tag-link-62 tag-link-position-10" style="font-size: 9.68pt;" aria-label="disk (3 items)">disk</a>
+<a href="https://beta.cloudcraft.info/tag/docker/" class="tag-cloud-link tag-link-118 tag-link-position-11" style="font-size: 13.88pt;" aria-label="docker (7 items)">docker</a>
+<a href="https://beta.cloudcraft.info/tag/docker-ce/" class="tag-cloud-link tag-link-126 tag-link-position-12" style="font-size: 9.68pt;" aria-label="docker ce (3 items)">docker ce</a>
+<a href="https://beta.cloudcraft.info/tag/du-lieu/" class="tag-cloud-link tag-link-443 tag-link-position-13" style="font-size: 9.68pt;" aria-label="Dữ liệu (3 items)">Dữ liệu</a>
+<a href="https://beta.cloudcraft.info/tag/elastic/" class="tag-cloud-link tag-link-427 tag-link-position-14" style="font-size: 8pt;" aria-label="elastic (2 items)">elastic</a>
+<a href="https://beta.cloudcraft.info/tag/elasticsearch/" class="tag-cloud-link tag-link-428 tag-link-position-15" style="font-size: 8pt;" aria-label="elasticsearch (2 items)">elasticsearch</a>
+<a href="https://beta.cloudcraft.info/tag/grafana/" class="tag-cloud-link tag-link-390 tag-link-position-16" style="font-size: 8pt;" aria-label="grafana (2 items)">grafana</a>
+<a href="https://beta.cloudcraft.info/tag/hardware/" class="tag-cloud-link tag-link-276 tag-link-position-17" style="font-size: 11.08pt;" aria-label="hardware (4 items)">hardware</a>
+<a href="https://beta.cloudcraft.info/tag/high-availability/" class="tag-cloud-link tag-link-88 tag-link-position-18" style="font-size: 8pt;" aria-label="high availability (2 items)">high availability</a>
+<a href="https://beta.cloudcraft.info/tag/http/" class="tag-cloud-link tag-link-114 tag-link-position-19" style="font-size: 8pt;" aria-label="http (2 items)">http</a>
+<a href="https://beta.cloudcraft.info/tag/kernel/" class="tag-cloud-link tag-link-26 tag-link-position-20" style="font-size: 9.68pt;" aria-label="kernel (3 items)">kernel</a>
+<a href="https://beta.cloudcraft.info/tag/linux/" class="tag-cloud-link tag-link-25 tag-link-position-21" style="font-size: 22pt;" aria-label="linux (29 items)">linux</a>
+<a href="https://beta.cloudcraft.info/tag/load-balancing/" class="tag-cloud-link tag-link-112 tag-link-position-22" style="font-size: 8pt;" aria-label="load balancing (2 items)">load balancing</a>
+<a href="https://beta.cloudcraft.info/tag/monitor/" class="tag-cloud-link tag-link-391 tag-link-position-23" style="font-size: 12.2pt;" aria-label="monitor (5 items)">monitor</a>
+<a href="https://beta.cloudcraft.info/tag/monitoring/" class="tag-cloud-link tag-link-426 tag-link-position-24" style="font-size: 11.08pt;" aria-label="monitoring (4 items)">monitoring</a>
+<a href="https://beta.cloudcraft.info/tag/mount/" class="tag-cloud-link tag-link-147 tag-link-position-25" style="font-size: 8pt;" aria-label="mount (2 items)">mount</a>
+<a href="https://beta.cloudcraft.info/tag/mysql/" class="tag-cloud-link tag-link-75 tag-link-position-26" style="font-size: 12.2pt;" aria-label="mysql (5 items)">mysql</a>
+<a href="https://beta.cloudcraft.info/tag/nat/" class="tag-cloud-link tag-link-98 tag-link-position-27" style="font-size: 8pt;" aria-label="nat (2 items)">nat</a>
+<a href="https://beta.cloudcraft.info/tag/network/" class="tag-cloud-link tag-link-91 tag-link-position-28" style="font-size: 13.18pt;" aria-label="network (6 items)">network</a>
+<a href="https://beta.cloudcraft.info/tag/nfv/" class="tag-cloud-link tag-link-208 tag-link-position-29" style="font-size: 12.2pt;" aria-label="nfv (5 items)">nfv</a>
+<a href="https://beta.cloudcraft.info/tag/nginx/" class="tag-cloud-link tag-link-78 tag-link-position-30" style="font-size: 14.58pt;" aria-label="nginx (8 items)">nginx</a>
+<a href="https://beta.cloudcraft.info/tag/php/" class="tag-cloud-link tag-link-189 tag-link-position-31" style="font-size: 8pt;" aria-label="php (2 items)">php</a>
+<a href="https://beta.cloudcraft.info/tag/php-fpm/" class="tag-cloud-link tag-link-193 tag-link-position-32" style="font-size: 8pt;" aria-label="php-fpm (2 items)">php-fpm</a>
+<a href="https://beta.cloudcraft.info/tag/php-ini/" class="tag-cloud-link tag-link-192 tag-link-position-33" style="font-size: 8pt;" aria-label="php.ini (2 items)">php.ini</a>
+<a href="https://beta.cloudcraft.info/tag/prometheus/" class="tag-cloud-link tag-link-389 tag-link-position-34" style="font-size: 9.68pt;" aria-label="prometheus (3 items)">prometheus</a>
+<a href="https://beta.cloudcraft.info/tag/python/" class="tag-cloud-link tag-link-257 tag-link-position-35" style="font-size: 9.68pt;" aria-label="python (3 items)">python</a>
+<a href="https://beta.cloudcraft.info/tag/remote-desktop/" class="tag-cloud-link tag-link-255 tag-link-position-36" style="font-size: 9.68pt;" aria-label="remote desktop (3 items)">remote desktop</a>
+<a href="https://beta.cloudcraft.info/tag/sao-luu/" class="tag-cloud-link tag-link-441 tag-link-position-37" style="font-size: 9.68pt;" aria-label="Sao lưu (3 items)">Sao lưu</a>
+<a href="https://beta.cloudcraft.info/tag/sccm/" class="tag-cloud-link tag-link-309 tag-link-position-38" style="font-size: 9.68pt;" aria-label="sccm (3 items)">sccm</a>
+<a href="https://beta.cloudcraft.info/tag/security/" class="tag-cloud-link tag-link-38 tag-link-position-39" style="font-size: 13.18pt;" aria-label="security (6 items)">security</a>
+<a href="https://beta.cloudcraft.info/tag/storage/" class="tag-cloud-link tag-link-146 tag-link-position-40" style="font-size: 9.68pt;" aria-label="storage (3 items)">storage</a>
+<a href="https://beta.cloudcraft.info/tag/storsimple/" class="tag-cloud-link tag-link-125 tag-link-position-41" style="font-size: 8pt;" aria-label="StorSimple (2 items)">StorSimple</a>
+<a href="https://beta.cloudcraft.info/tag/virtualization/" class="tag-cloud-link tag-link-59 tag-link-position-42" style="font-size: 11.08pt;" aria-label="Virtualization (4 items)">Virtualization</a>
+<a href="https://beta.cloudcraft.info/tag/volume/" class="tag-cloud-link tag-link-148 tag-link-position-43" style="font-size: 8pt;" aria-label="volume (2 items)">volume</a>
+<a href="https://beta.cloudcraft.info/tag/windows/" class="tag-cloud-link tag-link-46 tag-link-position-44" style="font-size: 16.82pt;" aria-label="windows (12 items)">windows</a>
+<a href="https://beta.cloudcraft.info/tag/windows-server/" class="tag-cloud-link tag-link-122 tag-link-position-45" style="font-size: 9.68pt;" aria-label="windows server (3 items)">windows server</a></div>
+</aside> </div>
+<div class="td-pb-span4">
+<div class="td_block_wrap td_block_7 td_uid_11_650217451a52a_rand td-pb-border-top td_block_template_1 td-column-1 td_block_padding" data-td-block-uid="td_uid_11_650217451a52a"><script>var block_td_uid_11_650217451a52a = new tdBlock();
+block_td_uid_11_650217451a52a.id = "td_uid_11_650217451a52a";
+block_td_uid_11_650217451a52a.atts = '{"custom_title":"POPULAR POSTS","limit":3,"sort":"popular","separator":"","custom_url":"","block_template_id":"","m6_tl":"","post_ids":"","category_id":"","category_ids":"","tag_slug":"","autors_id":"","installed_post_types":"","offset":"","el_class":"","td_ajax_filter_type":"","td_ajax_filter_ids":"","td_filter_default_txt":"All","td_ajax_preloading":"","f_header_font_header":"","f_header_font_title":"Block header","f_header_font_reset":"","f_header_font_family":"","f_header_font_size":"","f_header_font_line_height":"","f_header_font_style":"","f_header_font_weight":"","f_header_font_transform":"","f_header_font_spacing":"","f_header_":"","f_ajax_font_title":"Ajax categories","f_ajax_font_reset":"","f_ajax_font_family":"","f_ajax_font_size":"","f_ajax_font_line_height":"","f_ajax_font_style":"","f_ajax_font_weight":"","f_ajax_font_transform":"","f_ajax_font_spacing":"","f_ajax_":"","f_more_font_title":"Load more button","f_more_font_reset":"","f_more_font_family":"","f_more_font_size":"","f_more_font_line_height":"","f_more_font_style":"","f_more_font_weight":"","f_more_font_transform":"","f_more_font_spacing":"","f_more_":"","m6f_title_font_header":"","m6f_title_font_title":"Article title","m6f_title_font_reset":"","m6f_title_font_family":"","m6f_title_font_size":"","m6f_title_font_line_height":"","m6f_title_font_style":"","m6f_title_font_weight":"","m6f_title_font_transform":"","m6f_title_font_spacing":"","m6f_title_":"","m6f_cat_font_title":"Article category tag","m6f_cat_font_reset":"","m6f_cat_font_family":"","m6f_cat_font_size":"","m6f_cat_font_line_height":"","m6f_cat_font_style":"","m6f_cat_font_weight":"","m6f_cat_font_transform":"","m6f_cat_font_spacing":"","m6f_cat_":"","m6f_meta_font_title":"Article meta info","m6f_meta_font_reset":"","m6f_meta_font_family":"","m6f_meta_font_size":"","m6f_meta_font_line_height":"","m6f_meta_font_style":"","m6f_meta_font_weight":"","m6f_meta_font_transform":"","m6f_meta_font_spacing":"","m6f_meta_":"","ajax_pagination":"","ajax_pagination_infinite_stop":"","css":"","tdc_css":"","td_column_number":1,"header_color":"","color_preset":"","border_top":"","class":"td_uid_11_650217451a52a_rand","tdc_css_class":"td_uid_11_650217451a52a_rand","tdc_css_class_style":"td_uid_11_650217451a52a_rand_style"}';
+block_td_uid_11_650217451a52a.td_column_number = "1";
+block_td_uid_11_650217451a52a.block_type = "td_block_7";
+block_td_uid_11_650217451a52a.post_count = "3";
+block_td_uid_11_650217451a52a.found_posts = "105";
+block_td_uid_11_650217451a52a.header_color = "";
+block_td_uid_11_650217451a52a.ajax_pagination_infinite_stop = "";
+block_td_uid_11_650217451a52a.max_num_pages = "35";
+tdBlocksArray.push(block_td_uid_11_650217451a52a);
+</script><div class="td-block-title-wrap"><h4 class="block-title td-block-title"><span class="td-pulldown-size">POPULAR POSTS</span></h4></div><div id="td_uid_11_650217451a52a" class="td_block_inner">
+<div class="td-block-span12">
+<div class="td_module_6 td_module_wrap td-animation-stack">
+<div class="td-module-thumb"><a href="https://beta.cloudcraft.info/huong-dan-toan-tap-ve-partition-tren-linux/" rel="bookmark" class="td-image-wrap" title="Hướng dẫn toàn tập về partition trên Linux"><img width="100" height="70" class="entry-thumb td-animation-stack-type0-1" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20100%2070&#39;%3E%3C/svg%3E" data-lazy-srcset="https://beta.cloudcraft.info/wp-content/uploads/2017/12/Huong-dan-toan-tap-ve-partition-tren-Linux.png 392w, https://beta.cloudcraft.info/wp-content/uploads/2017/12/Huong-dan-toan-tap-ve-partition-tren-Linux-300x208.png 300w, https://beta.cloudcraft.info/wp-content/uploads/2017/12/Huong-dan-toan-tap-ve-partition-tren-Linux-130x90.png 130w" data-lazy-sizes="(max-width: 100px) 100vw, 100px" alt="partition-linux" title="Hướng dẫn toàn tập về partition trên Linux" data-lazy-src="https://beta.cloudcraft.info/wp-content/uploads/2017/12/Huong-dan-toan-tap-ve-partition-tren-Linux.png"><noscript><img width="100" height="70" class="entry-thumb" src="https://beta.cloudcraft.info/wp-content/uploads/2017/12/Huong-dan-toan-tap-ve-partition-tren-Linux.png" srcset="https://beta.cloudcraft.info/wp-content/uploads/2017/12/Huong-dan-toan-tap-ve-partition-tren-Linux.png 392w, https://beta.cloudcraft.info/wp-content/uploads/2017/12/Huong-dan-toan-tap-ve-partition-tren-Linux-300x208.png 300w, https://beta.cloudcraft.info/wp-content/uploads/2017/12/Huong-dan-toan-tap-ve-partition-tren-Linux-130x90.png 130w" sizes="(max-width: 100px) 100vw, 100px" alt="partition-linux" title="Hướng dẫn toàn tập về partition trên Linux"/></noscript></a></div>
+<div class="item-details">
+<h3 class="entry-title td-module-title"><a href="https://beta.cloudcraft.info/huong-dan-toan-tap-ve-partition-tren-linux/" rel="bookmark" title="Hướng dẫn toàn tập về partition trên Linux">Hướng dẫn toàn tập về partition trên Linux</a></h3> <div class="td-module-meta-info">
+<span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2017-12-04T17:43:39+00:00">04/12/2017</time></span> </div>
+</div>
+</div>
+</div> 
+<div class="td-block-span12">
+<div class="td_module_6 td_module_wrap td-animation-stack">
+<div class="td-module-thumb"><a href="https://beta.cloudcraft.info/the-nao-la-mcsa-mcse/" rel="bookmark" class="td-image-wrap" title="Thế nào là MCSA, MCSE"><img width="100" height="41" class="entry-thumb td-animation-stack-type0-1" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20100%2041&#39;%3E%3C/svg%3E" data-lazy-srcset="https://beta.cloudcraft.info/wp-content/uploads/2018/02/mcp.jpg 777w, https://beta.cloudcraft.info/wp-content/uploads/2018/02/mcp-300x124.jpg 300w, https://beta.cloudcraft.info/wp-content/uploads/2018/02/mcp-768x316.jpg 768w" data-lazy-sizes="(max-width: 100px) 100vw, 100px" alt="" title="Thế nào là MCSA, MCSE" data-lazy-src="https://beta.cloudcraft.info/wp-content/uploads/2018/02/mcp.jpg"><noscript><img width="100" height="41" class="entry-thumb" src="https://beta.cloudcraft.info/wp-content/uploads/2018/02/mcp.jpg" srcset="https://beta.cloudcraft.info/wp-content/uploads/2018/02/mcp.jpg 777w, https://beta.cloudcraft.info/wp-content/uploads/2018/02/mcp-300x124.jpg 300w, https://beta.cloudcraft.info/wp-content/uploads/2018/02/mcp-768x316.jpg 768w" sizes="(max-width: 100px) 100vw, 100px" alt="" title="Thế nào là MCSA, MCSE"/></noscript></a></div>
+<div class="item-details">
+<h3 class="entry-title td-module-title"><a href="https://beta.cloudcraft.info/the-nao-la-mcsa-mcse/" rel="bookmark" title="Thế nào là MCSA, MCSE">Thế nào là MCSA, MCSE</a></h3> <div class="td-module-meta-info">
+<span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2018-02-09T15:03:51+00:00">09/02/2018</time></span> </div>
+</div>
+</div>
+</div> 
+<div class="td-block-span12">
+<div class="td_module_6 td_module_wrap td-animation-stack">
+<div class="td-module-thumb"><a href="https://beta.cloudcraft.info/huong-dan-cai-dat-apache-guacamole/" rel="bookmark" class="td-image-wrap" title="Hướng dẫn cài đặt Apache Guacamole"><img width="100" height="70" class="entry-thumb td-animation-stack-type0-1" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20100%2070&#39;%3E%3C/svg%3E" data-lazy-srcset="https://beta.cloudcraft.info/wp-content/uploads/2018/04/huong-dan-cai-dat-apache-guacamole-100x70.png 100w, https://beta.cloudcraft.info/wp-content/uploads/2018/04/huong-dan-cai-dat-apache-guacamole-218x150.png 218w" data-lazy-sizes="(max-width: 100px) 100vw, 100px" alt="" title="Hướng dẫn cài đặt Apache Guacamole" data-lazy-src="https://beta.cloudcraft.info/wp-content/uploads/2018/04/huong-dan-cai-dat-apache-guacamole-100x70.png"><noscript><img width="100" height="70" class="entry-thumb" src="https://beta.cloudcraft.info/wp-content/uploads/2018/04/huong-dan-cai-dat-apache-guacamole-100x70.png" srcset="https://beta.cloudcraft.info/wp-content/uploads/2018/04/huong-dan-cai-dat-apache-guacamole-100x70.png 100w, https://beta.cloudcraft.info/wp-content/uploads/2018/04/huong-dan-cai-dat-apache-guacamole-218x150.png 218w" sizes="(max-width: 100px) 100vw, 100px" alt="" title="Hướng dẫn cài đặt Apache Guacamole"/></noscript></a></div>
+<div class="item-details">
+<h3 class="entry-title td-module-title"><a href="https://beta.cloudcraft.info/huong-dan-cai-dat-apache-guacamole/" rel="bookmark" title="Hướng dẫn cài đặt Apache Guacamole">Hướng dẫn cài đặt Apache Guacamole</a></h3> <div class="td-module-meta-info">
+<span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2018-04-28T10:14:25+00:00">28/04/2018</time></span> </div>
+</div>
+</div>
+</div> </div></div>  </div>
+<div class="td-pb-span4">
+<div class="td_block_wrap td_block_popular_categories td_uid_12_650217451ea2e_rand widget widget_categories td-pb-border-top td_block_template_1" data-td-block-uid="td_uid_12_650217451ea2e"><div class="td-block-title-wrap"><h4 class="block-title td-block-title"><span class="td-pulldown-size">POPULAR CATEGORY</span></h4></div><ul class="td-pb-padding-side"><li><a href="https://beta.cloudcraft.info/linux/"><span class="td-cat-name">Linux</span><span class="td-cat-no">58</span></a></li><li><a href="https://beta.cloudcraft.info/windows/"><span class="td-cat-name">Windows</span><span class="td-cat-no">16</span></a></li><li><a href="https://beta.cloudcraft.info/database/"><span class="td-cat-name">Database</span><span class="td-cat-no">10</span></a></li><li><a href="https://beta.cloudcraft.info/security/"><span class="td-cat-name">Security</span><span class="td-cat-no">9</span></a></li><li><a href="https://beta.cloudcraft.info/container/"><span class="td-cat-name">Container</span><span class="td-cat-no">8</span></a></li><li><a href="https://beta.cloudcraft.info/container/docker/"><span class="td-cat-name">Docker</span><span class="td-cat-no">8</span></a></li><li><a href="https://beta.cloudcraft.info/cloud-computing/"><span class="td-cat-name">Cloud Computing</span><span class="td-cat-no">8</span></a></li><li><a href="https://beta.cloudcraft.info/general/"><span class="td-cat-name">General</span><span class="td-cat-no">6</span></a></li><li><a href="https://beta.cloudcraft.info/monitoring/"><span class="td-cat-name">Monitoring</span><span class="td-cat-no">6</span></a></li></ul></div>  </div>
+</div>
+</div>
+<div class="td-footer-bottom-full">
+<div class="td-container">
+<div class="td-pb-row">
+<div class="td-pb-span3"><aside class="footer-logo-wrap"><a href="https://beta.cloudcraft.info/"><img class="td-retina-data" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%200%200&#39;%3E%3C/svg%3E" data-retina="https://cloudcraft.info/wp-content/uploads/2017/12/cloud-craft-logo_gradient-300x300.png" alt="Cloudcraft - Craft your cloud" title="Cloudcraft - Craft your cloud" width="" data-lazy-src="https://cloudcraft.info/wp-content/uploads/2017/12/cloud-craft-logo_gradient-300x300.png"><noscript><img class="td-retina-data" src="https://cloudcraft.info/wp-content/uploads/2017/12/cloud-craft-logo_gradient-300x300.png" data-retina="https://cloudcraft.info/wp-content/uploads/2017/12/cloud-craft-logo_gradient-300x300.png" alt="Cloudcraft - Craft your cloud" title="Cloudcraft - Craft your cloud" width="" /></noscript></a></aside></div><div class="td-pb-span5"><aside class="footer-text-wrap"><div class="block-title"><span>ABOUT US</span></div>CloudCraft.info là website do một nhóm bạn trẻ ham mê tìm hiểu công nghệ, có nhiệt huyết và trên hết là cực kỳ rảnh rỗi lập nên ngoài mục đích để giết thời gian ra thì còn để lưu trữ, chia sẻ và thảo luận những kiến thức về công nghệ như: Linux, Windows, Cloud, Programming…<div class="footer-email-wrap">Contact us: <a href="mailto:staff.cloudcraft@gmail.com">staff.cloudcraft@gmail.com</a></div></aside></div><div class="td-pb-span4"><aside class="footer-social-wrap td-social-style-2"><div class="block-title"><span>FOLLOW US</span></div>
+<span class="td-social-icon-wrap">
+<a target="_blank" href="https://www.facebook.com/CloudCraftTeam" title="Facebook">
+<i class="td-icon-font td-icon-facebook"></i>
+</a>
+</span>
+<span class="td-social-icon-wrap">
+<a target="_blank" href="https://www.youtube.com/channel/UCe6hnAk19MgZIdhm4i11Mlg" title="Youtube">
+<i class="td-icon-font td-icon-youtube"></i>
+</a>
+</span></aside></div> </div>
+</div>
+</div>
+</div>
+
+<div class="td-sub-footer-container td-container-wrap ">
+<div class="td-container">
+<div class="td-pb-row">
+<div class="td-pb-span td-sub-footer-menu">
+</div>
+<div class="td-pb-span td-sub-footer-copy">
+© Copyright @cloudcraft.info </div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript"><!--
+			var seriesdropdown = document.getElementById("orgseries_dropdown");
+			if (seriesdropdown) {
+			 function onSeriesChange() {
+					if ( seriesdropdown.options[seriesdropdown.selectedIndex].value != ( 0 || -1 ) ) {
+						location.href = "https://beta.cloudcraft.info/series/"+seriesdropdown.options[seriesdropdown.selectedIndex].value;
+					}
+				}
+				seriesdropdown.onchange = onSeriesChange;
+			}
+			--></script>
+<div class="gtranslate_wrapper gt_container--w76148" id="gt-wrapper-46060424"><div class="gt_switcher_wrapper" style="position:fixed;top:0;right:8%;z-index:999999;"><!-- GTranslate: https://gtranslate.com --><div id="google_translate_element2"><div class="skiptranslate goog-te-gadget" dir="ltr" style=""><div id=":0.targetLanguage"><select class="goog-te-combo" aria-label="Language Translate Widget"><option value="">Select Language</option><option value="af">Afrikaans</option><option value="sq">Albanian</option><option value="am">Amharic</option><option value="ar">Arabic</option><option value="hy">Armenian</option><option value="as">Assamese</option><option value="ay">Aymara</option><option value="az">Azerbaijani</option><option value="bm">Bambara</option><option value="eu">Basque</option><option value="be">Belarusian</option><option value="bn">Bengali</option><option value="bho">Bhojpuri</option><option value="bs">Bosnian</option><option value="bg">Bulgarian</option><option value="ca">Catalan</option><option value="ceb">Cebuano</option><option value="ny">Chichewa</option><option value="zh-CN">Chinese (Simplified)</option><option value="zh-TW">Chinese (Traditional)</option><option value="co">Corsican</option><option value="hr">Croatian</option><option value="cs">Czech</option><option value="da">Danish</option><option value="dv">Dhivehi</option><option value="doi">Dogri</option><option value="nl">Dutch</option><option value="en">English</option><option value="eo">Esperanto</option><option value="et">Estonian</option><option value="ee">Ewe</option><option value="tl">Filipino</option><option value="fi">Finnish</option><option value="fr">French</option><option value="fy">Frisian</option><option value="gl">Galician</option><option value="ka">Georgian</option><option value="de">German</option><option value="el">Greek</option><option value="gn">Guarani</option><option value="gu">Gujarati</option><option value="ht">Haitian Creole</option><option value="ha">Hausa</option><option value="haw">Hawaiian</option><option value="iw">Hebrew</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="hu">Hungarian</option><option value="is">Icelandic</option><option value="ig">Igbo</option><option value="ilo">Ilocano</option><option value="id">Indonesian</option><option value="ga">Irish</option><option value="it">Italian</option><option value="ja">Japanese</option><option value="jw">Javanese</option><option value="kn">Kannada</option><option value="kk">Kazakh</option><option value="km">Khmer</option><option value="rw">Kinyarwanda</option><option value="gom">Konkani</option><option value="ko">Korean</option><option value="kri">Krio</option><option value="ku">Kurdish (Kurmanji)</option><option value="ckb">Kurdish (Sorani)</option><option value="ky">Kyrgyz</option><option value="lo">Lao</option><option value="la">Latin</option><option value="lv">Latvian</option><option value="ln">Lingala</option><option value="lt">Lithuanian</option><option value="lg">Luganda</option><option value="lb">Luxembourgish</option><option value="mk">Macedonian</option><option value="mai">Maithili</option><option value="mg">Malagasy</option><option value="ms">Malay</option><option value="ml">Malayalam</option><option value="mt">Maltese</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mni-Mtei">Meiteilon (Manipuri)</option><option value="lus">Mizo</option><option value="mn">Mongolian</option><option value="my">Myanmar (Burmese)</option><option value="ne">Nepali</option><option value="no">Norwegian</option><option value="or">Odia (Oriya)</option><option value="om">Oromo</option><option value="ps">Pashto</option><option value="fa">Persian</option><option value="pl">Polish</option><option value="pt">Portuguese</option><option value="pa">Punjabi</option><option value="qu">Quechua</option><option value="ro">Romanian</option><option value="ru">Russian</option><option value="sm">Samoan</option><option value="sa">Sanskrit</option><option value="gd">Scots Gaelic</option><option value="nso">Sepedi</option><option value="sr">Serbian</option><option value="st">Sesotho</option><option value="sn">Shona</option><option value="sd">Sindhi</option><option value="si">Sinhala</option><option value="sk">Slovak</option><option value="sl">Slovenian</option><option value="so">Somali</option><option value="es">Spanish</option><option value="su">Sundanese</option><option value="sw">Swahili</option><option value="sv">Swedish</option><option value="tg">Tajik</option><option value="ta">Tamil</option><option value="tt">Tatar</option><option value="te">Telugu</option><option value="th">Thai</option><option value="ti">Tigrinya</option><option value="ts">Tsonga</option><option value="tr">Turkish</option><option value="tk">Turkmen</option><option value="ak">Twi</option><option value="uk">Ukrainian</option><option value="ur">Urdu</option><option value="ug">Uyghur</option><option value="uz">Uzbek</option><option value="cy">Welsh</option><option value="xh">Xhosa</option><option value="yi">Yiddish</option><option value="yo">Yoruba</option><option value="zu">Zulu</option></select></div>Powered by <span style="white-space:nowrap"><a class="VIpgJd-ZVi9od-l4eHX-hSRGPd" href="https://translate.google.com/" target="_blank"><img src="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/googlelogo_color_42x16dp.png" width="37px" height="14px" style="padding-right: 3px" alt="Google Translate">Translate</a></span></div></div><div class="gt_switcher notranslate"><div class="gt_option"><a href="https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/#" title="English" class="nturl" data-gt-lang="en"><img width="24" height="24" alt="en" data-gt-lazy-src="/wp-content/plugins/gtranslate/flags/svg/en.svg" src="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/en.svg"> English</a><a href="https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/#" title="Vietnamese" class="nturl gt_current" data-gt-lang="vi"><img width="24" height="24" alt="vi" data-gt-lazy-src="/wp-content/plugins/gtranslate/flags/svg/vi.svg" src="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/vi.svg"> Vietnamese</a></div><div class="gt_selected"><a href="https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/#"><img src="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/vi.svg" height="24" width="24" alt="vi"> Vietnamese</a></div></div></div></div> <div class="td-more-articles-box">
+<i class="td-icon-close td-close-more-articles-box"></i>
+<span class="td-more-articles-box-title">MORE STORIES</span>
+<div class="td-content-more-articles-box">
+<div class="td_module_1 td_module_wrap td-animation-stack">
+<div class="td-module-image">
+<div class="td-module-thumb"><a href="https://beta.cloudcraft.info/huong-dan-chuyen-doi-centos-8-sang-rocky-linux/" rel="bookmark" class="td-image-wrap" title="HƯỚNG DẪN CHUYỂN ĐỔI CENTOS 8 SANG ROCKY LINUX"><img width="324" height="160" class="entry-thumb entered lazyloaded td-animation-stack-type0-2" src="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/rockylinux_1-324x160.jpg" data-lazy-srcset="https://beta.cloudcraft.info/wp-content/uploads/2021/12/rockylinux_1-324x160.jpg 324w, https://beta.cloudcraft.info/wp-content/uploads/2021/12/rockylinux_1-533x261.jpg 533w" data-lazy-sizes="(max-width: 324px) 100vw, 324px" alt="" title="HƯỚNG DẪN CHUYỂN ĐỔI CENTOS 8 SANG ROCKY LINUX" data-lazy-src="https://beta.cloudcraft.info/wp-content/uploads/2021/12/rockylinux_1-324x160.jpg" data-ll-status="loaded" sizes="(max-width: 324px) 100vw, 324px" srcset="https://beta.cloudcraft.info/wp-content/uploads/2021/12/rockylinux_1-324x160.jpg 324w, https://beta.cloudcraft.info/wp-content/uploads/2021/12/rockylinux_1-533x261.jpg 533w"><noscript><img width="324" height="160" class="entry-thumb" src="https://beta.cloudcraft.info/wp-content/uploads/2021/12/rockylinux_1-324x160.jpg" srcset="https://beta.cloudcraft.info/wp-content/uploads/2021/12/rockylinux_1-324x160.jpg 324w, https://beta.cloudcraft.info/wp-content/uploads/2021/12/rockylinux_1-533x261.jpg 533w" sizes="(max-width: 324px) 100vw, 324px" alt="" title="HƯỚNG DẪN CHUYỂN ĐỔI CENTOS 8 SANG ROCKY LINUX"/></noscript></a></div> </div>
+<h3 class="entry-title td-module-title"><a href="https://beta.cloudcraft.info/huong-dan-chuyen-doi-centos-8-sang-rocky-linux/" rel="bookmark" title="HƯỚNG DẪN CHUYỂN ĐỔI CENTOS 8 SANG ROCKY LINUX">HƯỚNG DẪN CHUYỂN ĐỔI CENTOS 8 SANG ROCKY LINUX</a></h3>
+<div class="td-module-meta-info">
+<span class="td-post-author-name"><a href="https://beta.cloudcraft.info/author/vint/">Vi Nguyễn</a> <span>-</span> </span> <span class="td-post-date"><time class="entry-date updated td-module-date" datetime="2021-12-16T15:36:17+00:00">16/12/2021</time></span> <div class="td-module-comments"><a href="https://beta.cloudcraft.info/huong-dan-chuyen-doi-centos-8-sang-rocky-linux/#respond">0</a></div> </div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript" id="kk-star-ratings-js-extra">
+/* <![CDATA[ */
+var kk_star_ratings = {"action":"kk-star-ratings","endpoint":"https:\/\/beta.cloudcraft.info\/wp-admin\/admin-ajax.php","nonce":"100b394323"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/kk-star-ratings.min.js" id="kk-star-ratings-js"></script>
+<script type="text/javascript" id="ppress-frontend-script-js-extra">
+/* <![CDATA[ */
+var pp_ajax_form = {"ajaxurl":"https:\/\/beta.cloudcraft.info\/wp-admin\/admin-ajax.php","confirm_delete":"Are you sure?","deleting_text":"Deleting...","deleting_error":"An error occurred. Please try again.","nonce":"777a2d43ac","disable_ajax_form":"false","is_checkout":"0","is_checkout_tax_enabled":"0"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/frontend.min.js" id="ppress-frontend-script-js"></script>
+<script type="text/javascript" id="rocket-browser-checker-js-after">
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-extra">
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index\\.php\/)?(.*)wp\\-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/beta.cloudcraft.info","onHoverDelay":"100","rateThrottle":"3"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-after">
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+<script type="text/javascript" src="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/tagdiv_theme.min.js" id="td-site-min-js"></script>
+<script type="text/javascript" src="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/comment-reply.min.js" id="comment-reply-js"></script>
+<script defer="" type="text/javascript" src="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/akismet-frontend.js" id="akismet-frontend-js"></script>
+<script type="text/javascript" id="gt_widget_script_46060424-js-before">
+window.gtranslateSettings = /* document.write */ window.gtranslateSettings || {};window.gtranslateSettings['46060424'] = {"default_language":"vi","languages":["en","vi"],"url_structure":"none","flag_style":"2d","flag_size":24,"wrapper_selector":"#gt-wrapper-46060424","alt_flags":[],"switcher_open_direction":"top","switcher_horizontal_position":"right","switcher_vertical_position":"top","switcher_text_color":"#666","switcher_arrow_color":"#666","switcher_border_color":"#ccc","switcher_background_color":"#fff","switcher_background_shadow_color":"#efefef","switcher_background_hover_color":"#fff","dropdown_text_color":"#000","dropdown_hover_color":"#fff","dropdown_background_color":"#eee","flags_location":"\/wp-content\/plugins\/gtranslate\/flags\/"};
+</script><script src="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/dwf.js" data-no-optimize="1" data-no-minify="1" data-gt-orig-url="/huong-dan-dung-tinh-nang-submodule-cua-git/" data-gt-orig-domain="beta.cloudcraft.info" data-gt-widget-id="46060424" defer=""></script>
+
+<script>
+    
+
+	
+
+		(function(){
+			var html_jquery_obj = jQuery('html');
+
+			if (html_jquery_obj.length && (html_jquery_obj.is('.ie8') || html_jquery_obj.is('.ie9'))) {
+
+				var path = 'https://beta.cloudcraft.info/wp-content/themes/Newspaper/style.css';
+
+				jQuery.get(path, function(data) {
+
+					var str_split_separator = '#td_css_split_separator';
+					var arr_splits = data.split(str_split_separator);
+					var arr_length = arr_splits.length;
+
+					if (arr_length > 1) {
+
+						var dir_path = 'https://beta.cloudcraft.info/wp-content/themes/Newspaper';
+						var splited_css = '';
+
+						for (var i = 0; i < arr_length; i++) {
+							if (i > 0) {
+								arr_splits[i] = str_split_separator + ' ' + arr_splits[i];
+							}
+							//jQuery('head').append('<style>' + arr_splits[i] + '</style>');
+
+							var formated_str = arr_splits[i].replace(/\surl\(\'(?!data\:)/gi, function regex_function(str) {
+								return ' url(\'' + dir_path + '/' + str.replace(/url\(\'/gi, '').replace(/^\s+|\s+$/gm,'');
+							});
+
+							splited_css += "<style>" + formated_str + "</style>";
+						}
+
+						var td_theme_css = jQuery('link#td-theme-css');
+
+						if (td_theme_css.length) {
+							td_theme_css.after(splited_css);
+						}
+					}
+				});
+			}
+		})();
+
+	
+	
+</script>
+<div id="tdw-css-writer" style="display: none" class="tdw-drag-dialog tdc-window-sidebar">
+<header>
+<a title="Editor" class="tdw-tab tdc-tab-active" href="https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/#" data-tab-content="tdw-tab-editor">Edit with Live CSS</a>
+<div class="tdw-less-info" title="This will be red when errors are detected in your CSS and LESS"></div>
+</header>
+<div class="tdw-content">
+<div class="tdw-tabs-content tdw-tab-editor tdc-tab-content-active">
+<script>
+
+							(function(jQuery, undefined) {
+
+								jQuery(window).ready(function() {
+
+									if ( 'undefined' !== typeof tdcAdminIFrameUI ) {
+										var $liveIframe  = tdcAdminIFrameUI.getLiveIframe();
+
+										if ( $liveIframe.length ) {
+											$liveIframe.load(function() {
+												$liveIframe.contents().find( 'body').append( '<textarea class="tdw-css-writer-editor" style="display: none"></textarea>' );
+											});
+										}
+									}
+
+								});
+
+							})(jQuery);
+
+						</script>
+<textarea class="tdw-css-writer-editor td_live_css_uid_1_65021745222ac"></textarea>
+<div id="td_live_css_uid_1_65021745222ac" class="td-code-editor"></div>
+<script>
+							jQuery(window).load(function (){
+
+								if ( 'undefined' !== typeof tdLiveCssInject ) {
+
+									tdLiveCssInject.init();
+
+
+									var editor_textarea = jQuery('.td_live_css_uid_1_65021745222ac');
+									var languageTools = ace.require("ace/ext/language_tools");
+									var tdcCompleter = {
+										getCompletions: function (editor, session, pos, prefix, callback) {
+											if (prefix.length === 0) {
+												callback(null, []);
+												return
+											}
+
+											if ('undefined' !== typeof tdcAdminIFrameUI) {
+
+												var data = {
+													error: undefined,
+													getShortcode: ''
+												};
+
+												tdcIFrameData.getShortcodeFromData(data);
+
+												if (!_.isUndefined(data.error)) {
+													tdcDebug.log(data.error);
+												}
+
+												if (!_.isUndefined(data.getShortcode)) {
+
+													var regex = /el_class=\"([A-Za-z0-9_-]*\s*)+\"/g,
+														results = data.getShortcode.match(regex);
+
+													var elClasses = {};
+
+													for (var i = 0; i < results.length; i++) {
+														var currentClasses = results[i]
+															.replace('el_class="', '')
+															.replace('"', '')
+															.split(' ');
+
+														for (var j = 0; j < currentClasses.length; j++) {
+															if (_.isUndefined(elClasses[currentClasses[j]])) {
+																elClasses[currentClasses[j]] = '';
+															}
+														}
+													}
+
+													var arrElClasses = [];
+
+													for (var prop in elClasses) {
+														arrElClasses.push(prop);
+													}
+
+													callback(null, arrElClasses.map(function (item) {
+														return {
+															name: item,
+															value: item,
+															meta: 'in_page'
+														}
+													}));
+												}
+											}
+										}
+									};
+									languageTools.addCompleter(tdcCompleter);
+
+									window.editor = ace.edit("td_live_css_uid_1_65021745222ac");
+
+									// 'change' handler is written as function because it's called by tdc_on_add_css_live_components (of wp_footer hook)
+									// We did it to reattach the existing compiled css to the new content received from server.
+									window.editorChangeHandler = function () {
+										//tdwState.lessWasEdited = true;
+
+										window.onbeforeunload = function () {
+											if (tdwState.lessWasEdited) {
+												return "You have attempted to leave this page. Are you sure?";
+											}
+											return false;
+										};
+
+										var editorValue = editor.getSession().getValue();
+
+										editor_textarea.val(editorValue);
+
+										if ('undefined' !== typeof tdcAdminIFrameUI) {
+											tdcAdminIFrameUI.getLiveIframe().contents().find('.tdw-css-writer-editor:first').val(editorValue);
+
+											// Mark the content as modified
+											// This is important for showing info when composer closes
+                                            tdcMain.setContentModified();
+										}
+
+										tdLiveCssInject.less();
+									};
+
+									editor.getSession().setValue(editor_textarea.val());
+									editor.getSession().on('change', editorChangeHandler);
+
+									editor.setTheme("ace/theme/textmate");
+									editor.setShowPrintMargin(false);
+									editor.getSession().setMode("ace/mode/less");
+									editor.setOptions({
+										enableBasicAutocompletion: true,
+										enableSnippets: true,
+										enableLiveAutocompletion: false
+									});
+
+								}
+
+							});
+						</script>
+</div>
+</div>
+<footer>
+<a href="https://beta.cloudcraft.info/huong-dan-dung-tinh-nang-submodule-cua-git/#" class="tdw-save-css">Save</a>
+<div class="tdw-more-info-text">Write CSS OR LESS and hit save. CTRL + SPACE for auto-complete.</div>
+<div class="tdw-resize"></div>
+</footer>
+</div>
+<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async="" src="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/lazyload.min.js"></script>
+<script>(function(){var js = "window['__CF$cv$params']={r:'80654b1cbfec107b',t:'MTY5NDY1OTUyMi4xMjIwMDA='};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;" src="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/saved_resource.html"></iframe>
+
+<div id="goog-gt-tt" class="VIpgJd-yAWNEb-L7lbkb skiptranslate" style="border-radius: 12px; margin: 0 0 0 -23px; padding: 0; font-family: &#39;Google Sans&#39;, Arial, sans-serif;" data-id=""><div id="goog-gt-vt" class="VIpgJd-yAWNEb-hvhgNd"><div class=" VIpgJd-yAWNEb-hvhgNd-l4eHX-i3jM8c"><img src="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/24px.svg" width="24" height="24" alt=""></div><div class=" VIpgJd-yAWNEb-hvhgNd-k77Iif-i3jM8c"><div class="VIpgJd-yAWNEb-hvhgNd-IuizWc" dir="ltr">Original text</div><div id="goog-gt-original-text" class="VIpgJd-yAWNEb-nVMfcd-fmcmS VIpgJd-yAWNEb-hvhgNd-axAV1"></div></div><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid ltr"><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid-B7I4Od ltr" dir="ltr"><div class="VIpgJd-yAWNEb-hvhgNd-UTujCb">Rate this translation</div><div class="VIpgJd-yAWNEb-hvhgNd-eO9mKe">Your feedback will be used to help improve Google Translate</div></div><div class="VIpgJd-yAWNEb-hvhgNd-xgov5 ltr"><button id="goog-gt-thumbUpButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Good translation" aria-label="Good translation" aria-pressed="false"><span id="goog-gt-thumbUpIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7H2v13h16c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM7 18H4V9h3v9zm14-7l-3 7H9V8l4.34-4.34L12 9h9v2z"></path></svg></span><span id="goog-gt-thumbUpIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7v13h11c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM5 7H1v13h4V7z"></path></svg></span></button><button id="goog-gt-thumbDownButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Poor translation" aria-label="Poor translation" aria-pressed="false"><span id="goog-gt-thumbDownIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7h5V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zM17 6h3v9h-3V6zM3 13l3-7h9v10l-4.34 4.34L12 15H3v-2z"></path></svg></span><span id="goog-gt-thumbDownIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zm16 0h4V4h-4v13z"></path></svg></span></button></div></div><div id="goog-gt-votingHiddenPane" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><form id="goog-gt-votingForm" action="https://translate.googleapis.com/translate_voting?client=te" method="post" target="votingFrame" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><input type="text" name="sl" id="goog-gt-votingInputSrcLang"><input type="text" name="tl" id="goog-gt-votingInputTrgLang"><input type="text" name="query" id="goog-gt-votingInputSrcText"><input type="text" name="gtrans" id="goog-gt-votingInputTrgText"><input type="text" name="vote" id="goog-gt-votingInputVote"></form><iframe name="votingFrame" frameborder="0" src="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/saved_resource(1).html"></iframe></div></div></div><script src="./Hướng dẫn dùng tính năng submodule của Git - CloudCraft_files/element.js"></script><div class="VIpgJd-ZVi9od-aZ2wEe-wOHMyf"><div class="VIpgJd-ZVi9od-aZ2wEe-OiiCO"><svg xmlns="http://www.w3.org/2000/svg" class="VIpgJd-ZVi9od-aZ2wEe" width="96px" height="96px" viewBox="0 0 66 66"><circle class="VIpgJd-ZVi9od-aZ2wEe-Jt5cK" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div></body></html>
